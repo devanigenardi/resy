@@ -1,0 +1,180 @@
+.form-container {
+    margin-top: 30px;
+    @media screen and (max-width: 767px) {
+        padding: 0 20px;
+    }
+    .logo {
+        display: flex;
+        margin-bottom: 15px;
+        img {
+            height: 38px;
+            width: auto;
+        }
+        .bar {
+            height: 38px;
+            width: 100%;
+            background: #CCE0FF;
+            margin-left: 20px;
+        }
+    }
+
+    .form-section {
+        font-family: 'BentonSansRegular';
+        .form-content {
+            background: #CCE0FF;
+            padding: 70px 130px 40px 30px;
+            width: 64%;
+            color: $dark-grey;
+            float: left;
+            @media screen and (max-width: 767px) {
+                display: block;
+                width: 100%;
+                padding: 20px;
+            }
+
+            h2 {
+                font-family: 'Guardian Egyptian light';
+                letter-spacing: 2px;
+                font-size: 40px;
+                line-height: 48px;
+                margin-bottom: 35px;
+                @media screen and (max-width: 767px) {
+                    font-size: 25px;
+                    line-height: 31px;
+                    margin-bottom: 20px;
+                    letter-spacing: 1px;
+                }
+            }
+
+            & > p {
+                font-size: 20px;
+                line-height: 48px;
+                line-height: 26px;
+                margin-bottom: 35px;
+                @media screen and (max-width: 767px) {
+                    font-size: 18px;
+                    line-height: 23px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            div {
+                border-left: 2px solid $white;
+                padding-left: 20px;
+                position: relative;
+                @media screen and (max-width: 767px) {
+                    padding-left: 0px;
+                    border: none;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                    &:first-child {
+                        margin-bottom: 30px;
+                        @media screen and (max-width: 767px) {
+                            margin-bottom: 20px;
+                            font-size: 15px;
+                            line-height: 21px;
+                        }
+                    }
+                    span {
+                        font-family: 'BentonSansMedium';
+                    }
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 30px;
+                    width: 11px;
+                    background: url(../images/svg/arrow_white_amex.svg) no-repeat;
+                    left: -1px;
+                    bottom: 8px;
+                    @media screen and (max-width: 767px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .form-hidden {
+            padding: 35px 30px 60px 40px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                height: 40px;
+                width: 14px;
+                background: url(../images/svg/arrow_white_amex.svg) no-repeat;
+                left: -1px;
+                top: 30px;
+                background-size: contain;
+            }
+        }
+        .form {
+            width: 36%;
+            background-color: #006FCF;
+            padding: 30px 40px;
+            color: $white;
+            float: right;
+            border-radius: 2px;
+            @media screen and (max-width: 767px) {
+                display: block;
+                width: 100vw;
+                margin: 0 -20px;
+                padding: 40px 20px;
+                max-width: 480px;
+            }
+
+            h2 {
+                font-family: 'BentonSansMedium';
+                font-size: 20px;
+                letter-spacing: 1px;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid #D8D8D8;
+            }
+
+            div {
+                border-left: 1px solid #D8D8D8;
+                margin-bottom: 15px;
+                font-size: 14px;
+                padding: 5px 0px 5px 10px;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                input {
+                    display: block;
+                    width: 100%;
+                    border: 0;
+                    outline: 0;
+                    padding: 10px;
+                    border-radius: 2px;
+                }
+
+            }
+
+            button {
+                margin-top: 30px;
+                text-align: center;
+                width: 100%;
+                padding: 15px;
+                color: #006FCF;
+                font-family: 'BentonSansMedium';
+                border-radius: 2px;
+                outline: 0;
+                border: 1px solid $white;
+                transition: all .5s ease 0s;
+                cursor: pointer;
+                background: $white;
+                &:hover {
+                    background: #006FCF;
+                    color: $white;
+                    border: 1px solid $white;
+                }
+            }
+        }
+    }
+}

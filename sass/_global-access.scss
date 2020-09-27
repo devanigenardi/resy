@@ -1,0 +1,171 @@
+.global-access, .global-access-cards {
+    @media screen and (max-width: 767px) {
+        padding: 0 20px;
+        @media screen and (max-width: 767px) {
+            padding: 0;
+        }
+    }
+}
+
+.global-access {
+    padding-top: 70px;
+    margin: 70px 0 80px 0;
+    border-top: 1px solid $dark-blue;
+    color: $white;
+    @media screen and (max-width: 767px) {
+        margin: 30px 0 30px 0;
+    }
+    
+    & > div {
+        width: 100%;
+        background: url(../images/amex-global-access.jpg) no-repeat;
+        background-size: cover;
+        @media screen and (max-width: 767px) {
+            background: url(../images/amex-global-access-mobile.jpg) no-repeat;
+            background-size: contain;
+        }
+
+        & > div {
+            max-width: 615px;
+            width: 100%;
+            padding: 180px 20px 0 25px;
+            @media screen and (max-width: 767px) {
+                padding: 70px 0px 0 0px;
+            }
+            h2 {
+                font-size: 40px;
+                line-height: 46px;
+                font-family: 'Guardian Egyptian light';
+                letter-spacing: 2px;;
+                margin-bottom: 40px;
+                @media screen and (max-width: 767px) {
+                    font-size: 25px;
+                    line-height: 31px;
+                    max-width: 250px;
+                    padding: 0 20px;
+                }
+            }
+            div {
+                font-family: 'BentonSansRegular';
+                color: $dark-grey;
+                padding: 50px 75px 0 25px;
+                background: $white;
+                font-size: 16px;
+                line-height: 25px;
+                margin: 0 40px 0 -25px;
+                @media screen and (max-width: 767px) {
+                    padding: 20px;
+                    margin: -20px 0 0 0;
+                    width: 95%;
+                }
+                p {
+                    border-left: 2px solid #CCE0FF;
+                    padding-left: 25px;
+                    margin-left: -25px;
+                    @media screen and (max-width: 767px) {
+                        margin-left: 0px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.global-access-cards-bg {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        height: 2px;
+        width: 40%;
+        background: #CCE0FF;
+    }
+}
+.global-access-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &:last-child {
+        margin: 0px 0 110px 0;
+        @media screen and (max-width: 767px) {
+            margin: 0px 0 25px 0;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+
+    .pull-left {
+        margin-left: -20px;
+        @media screen and (max-width: 767px) {
+            margin-left: 0px;
+        }
+    }
+
+    .pull-right{
+        margin-right: -20px;
+        @media screen and (max-width: 767px) {
+            margin-right: 0px;
+        }
+    }
+    
+    div {
+        width: 33%;
+        margin-bottom: 65px;
+        padding: 0 20px;
+        @media screen and (max-width: 767px) {
+            padding: 0 20px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        h3 {
+            color: $dark-blue;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-family: 'Guardian Egyptian Regular';
+            letter-spacing: 1px;
+            font-size: 20px;
+            @media screen and (max-width: 767px) {
+                letter-spacing: 1px;
+                font-size: 18px;
+            }
+            img {
+                margin-right: 10px;;
+            }
+        }
+        p {
+            font-family: 'BentonSansRegular';
+            color: $dark-grey;
+            @media screen and (max-width: 767px) {
+                font-size: 15px;
+                line-break: 23px;
+            }
+        }
+    }
+    .extra-padding {
+        background: $white;
+        padding: 0px 20px 20px 20px;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.corner-image {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    z-index: -1;
+    @media screen and (max-width: 767px) {
+        position: relative;
+        padding-bottom: 30px;
+        display: block;
+    }
+}

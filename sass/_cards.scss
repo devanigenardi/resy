@@ -1,0 +1,77 @@
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+
+    div {
+        max-width: 326px;
+        width: 100%;
+        padding: 25px 20px 15px 20px;
+        text-align: center;
+        background-color: $white;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        color: $dark-blue;
+        -webkit-box-shadow: -1px -1px 10px -4px rgba(138,138,138,1);
+        -moz-box-shadow: -1px -1px 10px -4px rgba(138,138,138,1);
+        box-shadow: -1px -1px 10px -4px rgba(138,138,138,1);
+        font-family: 'Guardian Egyptian Regular';
+        font-size: 20px;
+        position: relative;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 767px) {
+            margin: 0px auto 20px auto;
+            max-width: 90%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px 20px 20px 20px;
+        }
+
+        img {
+            height: 55px;
+            width: auto;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            @media screen and (max-width: 767px) {
+                margin: initial;
+                width: 39px;
+                height: 39px;
+                margin-left: 10px;
+            }
+        }
+
+        p {
+            line-height: 26px;
+            letter-spacing: 0;
+            margin-bottom: 40px;
+            @media screen and (max-width: 767px) {
+                font-size: 15px;
+                text-align: left;
+                padding-left: 30px;
+                margin-bottom: 0px;
+                line-height: 19px;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 1px;
+            background: $dark-blue;
+            bottom: 15px;
+            margin: auto;
+            left: 0px;
+            right: 0px;
+            @media screen and (max-width: 767px) {
+                bottom: 5px;
+            }
+        }
+    }
+}

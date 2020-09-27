@@ -1,0 +1,77 @@
+@font-face {
+	font-family: 'Guardian Egyptian Web';
+	src: url("../fonts/GuardianEgyp-Medium-Web.woff") format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'Guardian Egyptian Regular';
+	src: url("../fonts/GuardianEgyp-Regular-Web.woff") format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'Guardian Egyptian light';
+	src: url("../fonts/GuardianEgyp-Light-Web.woff") format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'BentonSans';
+	src: url("../fonts/BentonSansBold.woff") format('woff');
+	font-weight:  700;
+	font-style:   normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'BentonSansMedium';
+	src: url("../fonts/BentonSansMedium.woff") format('woff');
+	font-weight:  400;
+	font-style:   normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'BentonSansRegular';
+	src: url("../fonts/BentonSansRegular.woff") format('woff');
+	font-weight:  200;
+	font-style:   normal;
+	font-stretch: normal;
+}
+
+.GuardianEgyp-Light-Web {
+	font-family: 'Guardian Egyptian Web';  font-weight:  300;  font-style:   normal;  font-stretch: normal;
+	text-transform: none;
+}
+
+.GuardianEgyp-Regular-Web {
+	font-family: 'Guardian Egyptian Web';
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	text-transform: none;
+}
+
+.GuardianEgyp-Medium-Web {
+	font-family: 'Guardian Egyptian Web';
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	text-transform: none;
+}
+
+h1, h2, h3{
+	font-family: 'Guardian Egyptian light';
+	letter-spacing: 2px;
+}
+
+p, a {
+	font-family: 'BentonSansRegular';
+}

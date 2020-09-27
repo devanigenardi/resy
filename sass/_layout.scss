@@ -1,0 +1,42 @@
+body {
+    font-family: 'Guardian Egyptian Web';
+
+    .wrapper {
+        width: 100%;
+    
+        .slab {
+            margin: 0 auto;
+            max-width: 1440px;
+            width: 100%;
+            padding: 0 20px;
+            overflow: hidden;
+
+            @media screen and (max-width: 767px) {
+                max-width: 480px;
+                padding: 0px;
+            }
+
+            .inner-container {
+                width: 100%;
+                max-width: 1140px;
+                margin: 0 auto;
+            }
+        }
+
+        .hero-background {
+            position: relative;
+            @media screen and (max-width: 767px) {
+                position: initial;
+            }
+        }
+
+        .cards {
+            position: relative;
+            margin-top: -53px;
+            @media screen and (max-width: 767px) {
+                margin-top: -10px;
+            }
+        }
+    }
+
+}

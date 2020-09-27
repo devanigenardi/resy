@@ -1,0 +1,85 @@
+.resy-power {
+    margin-top: 110px;
+    background: url(../images/amex-resy-power.jpg) no-repeat;
+    color: $white;
+    @media screen and (max-width: 767px) {
+        background: url(../images/amex-resy-power-mobile.jpg) no-repeat;
+        background-color: #006FCF;
+        background-size: cover;
+        background-position: center bottom;
+    }
+    .resy-power-container {
+        padding: 90px 20px 110px;
+        @media screen and (max-width: 767px) {
+            padding: 30px 0 60px;
+        }
+        .headline {
+            text-align: center;
+            border: 1px solid #D8D8D8;
+            padding: 25px 200px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 948px;
+            margin-bottom: 50px;
+            @media screen and (max-width: 767px) {
+                border-top: 1px solid #D8D8D8;
+                border-bottom: 1px solid #D8D8D8;
+                border-left: 0px solid #D8D8D8;
+                border-right: 0px solid #D8D8D8;
+                padding: 20px 20px;
+            }
+            h2 {
+                font-size: 40px;
+                line-height: 44px;
+                margin-bottom: 30px;
+                @media screen and (max-width: 767px) {
+                    font-size: 25px;
+                    margin-bottom: 20px;
+                    letter-spacing: 1px;
+                }
+            }
+            p {
+                @media screen and (max-width: 767px) {
+                    font-size: 16px;
+                    line-height: 25px;
+                }
+            }
+        }
+
+        .info {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 948px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 45px;
+            @media screen and (max-width: 767px) {
+                padding: 0 20px;
+                flex-direction: column;
+            }
+            p {
+                max-width: 425px;
+                width: 100%;
+                font-size: 16px;
+                line-height: 25px;
+                @media screen and (max-width: 767px) {
+                    font-size: 16px;
+                    line-height: 25px;
+                }
+                &:first-child {
+                    @media screen and (max-width: 767px) {
+                        margin-bottom: 20px
+                    }
+                }
+            }
+        }
+        img {
+            margin: 0 auto;
+            width: 220px;;
+            height: auto;
+            @media screen and (max-width: 767px) {
+                width: 169px;
+            }
+        }
+    }
+}

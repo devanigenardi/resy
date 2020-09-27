@@ -1,0 +1,42 @@
+$white: #ffffff;
+$dark-blue: #00175A;
+$grey: #cccccc;
+$dark-grey: #333333;
+$light-blue: #CCE0FF;
+
+// font size 
+
+@mixin fs-45 {
+    font-size: 45px;
+    line-height: 51px;
+    letter-spacing: 1px;
+    @media screen and (max-width: 767px) {
+        font-size: 34px;
+        line-height: 38px;
+    }
+}
+
+@mixin fs-20 {
+    font-size: 20px;
+    line-height: 31px;
+}
+
+@mixin fs-20-l {
+    font-size: 20px;
+    line-height: 31px;
+    font-family: 'Guardian Egyptian Light';
+    @media screen and (max-width: 767px) {
+        font-size: 15px;
+        line-height: 19px;
+    }
+}
+
+@mixin fs-20-Benton-R {
+    font-size: 18px;
+    line-height: 31px;
+    font-family: 'BentonSansRegular';
+    @media screen and (max-width: 767px) {
+        font-size: 15px;
+        line-height: 23px;
+    }
+}

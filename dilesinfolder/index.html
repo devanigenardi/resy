@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DiningProgramRGA.com</title>
+	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.serialize-object.min.js"></script>
+	<style>
+		label { display: block; margin-top: 1em; }
+		input[type=text] { padding: 3px; font-size: 16px; width: 200px;}
+		button[type=submit] { margin-top: 20px; font-size: 18px;}
+	</style>
+</head>
+<body>
+<form id="test-form" method="get">
+  
+  <div>
+    <label>Field 1</label>
+    <input type="text" name="form_field_1" />
+  </div>
+
+  <div>
+    <label>Field 2</label>
+    <input type="text" name="form_field_2" />
+  </div>
+  
+  <div>
+    <label>Field 3</label>
+    <input type="text" name="form_field_3" />
+  </div>
+  
+  <div>
+    <button type="submit" id="submit-form">Submit</button>
+  </div>
+
+</form>
+
+<script>
+//https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175
+//https://mashe.hawksey.info/2014/07/google-sheets-as-a-database-insert-with-apps-script-using-postget-methods-with-ajax-example/
+var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbyylZCz_nqQQvmlDf4qEwEWDu7JipVCBYVGLityl98EgS0k06BP/exec'
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).done(function(e) {
+    	alert("submitted");
+    	console.log(e) //{result: "success", row: 9}
+    }
+  );
+})
+</script>
+
+</body>
+</html>

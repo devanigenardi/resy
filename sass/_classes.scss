@@ -1,0 +1,46 @@
+.fs-45 {
+    @include fs-45;
+}
+
+.fs-20 {
+    @include fs-20;
+}
+
+.fs-20-l {
+    @include fs-20-l;
+    letter-spacing: 1px;
+}
+
+.fs-20-Benton-R {
+    @include fs-20-Benton-R;
+}
+
+.mobile-hero-image {
+    display: none;
+    @media screen and (max-width: 767px) {
+        display: block;
+        max-width: 480px;
+        width: 100%;
+        margin: 0 auto
+    }
+}
+
+.show-mobile {
+    display: none;
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+}
+
+.hide-mobile {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.nobr {
+    white-space: nowrap;
+    @media screen and (max-width: 767px) {
+        white-space: normal;
+    }
+}

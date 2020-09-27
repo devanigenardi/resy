@@ -1,0 +1,71 @@
+.resy-app-container {
+    padding: 90px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        padding: 0 20px;
+        flex-direction: column-reverse
+    }
+
+    img {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    div {
+        width: 350px;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin:50px 0 40px 0;
+        }
+        h2 {
+            font-size: 30px;
+            font-family: 'Guardian Egyptian Regular';
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            color: $dark-grey;
+            @media screen and (max-width: 767px) {
+                font-size: 25px;
+                margin-bottom: 30px;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 25px;
+            color: $dark-grey;
+            padding-left: 20px;
+            border-left: 1px solid $light-blue;
+            margin-bottom: 30px;
+        }
+        a {
+            font-size: 16px;
+            line-height: 25px;
+            text-decoration: none;
+            color: #5580DE;
+            font-family: 'BentonSansMedium';
+            span {
+                width: 8px;
+                height: 12px;
+                position: relative;
+                display: inline-block;
+                img {
+                    width: 8px;
+                    height: 12px;
+                    display: inline-block;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    transition: all .5s ease 0s;
+                }
+            }
+            &:hover > span img {
+                left: 5px
+            }
+        }
+        
+    }
+}
