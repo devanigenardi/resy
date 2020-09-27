@@ -35,7 +35,6 @@
             h2 {
                 font-size: 40px;
                 line-height: 46px;
-                font-family: 'Guardian Egyptian light';
                 letter-spacing: 2px;;
                 margin-bottom: 40px;
                 @media screen and (max-width: 767px) {
@@ -86,7 +85,7 @@
 }
 .global-access-cards {
     width: 100%;
-    display: flex;
+    @include flexbox; 
     justify-content: space-between;
     flex-wrap: wrap;
     &:last-child {
@@ -126,10 +125,10 @@
         h3 {
             color: $dark-blue;
             margin-bottom: 10px;
-            display: flex;
+            @include flexbox; 
             align-items: center;
             font-family: 'Guardian Egyptian Regular';
-            letter-spacing: 1px;
+            letter-spacing: 0px;
             font-size: 20px;
             @media screen and (max-width: 767px) {
                 letter-spacing: 1px;
@@ -165,7 +164,8 @@
     z-index: -1;
     @media screen and (max-width: 767px) {
         position: relative;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
         display: block;
+        bottom: 0px;
     }
 }

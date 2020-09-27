@@ -1,6 +1,5 @@
 .logo-border {
     border-bottom: 2px solid #00175A;
-    
 
     .logo {
         padding: 20px 0;
@@ -13,9 +12,10 @@
 }
 
 .hero-background {
-    background: url("../images/hero_dt@2x.jpg") no-repeat top center;
+    background: url("../images/amex-hero.jpg") no-repeat top center;
     background-size: cover;
     color: $white;
+    border-top: 2px solid $white;
     @media screen and (max-width: 767px) {
         background: none;
     }
@@ -23,7 +23,7 @@
     .hero-container {
         @media screen and (max-width: 767px) {
             background-color: #152025;
-            background-image: url("../images/mobile-bg.jpg") ;
+            background-image: url("../images/amex-mobile-bg.jpg") ;
             background-size: 100%;
             background-position: center bottom;
             background-repeat: no-repeat;

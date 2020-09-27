@@ -1,0 +1,17 @@
+.resy-footer {
+    background: $blue;
+    .footer {
+        padding: 95px 0;
+        @media screen and (max-width: 767px) {
+            padding: 40px 0;
+        }
+        img {
+            margin: 0 auto;
+            width: 250px;
+            height: auto;
+            @media screen and (max-width: 767px) {
+                width: 210px;
+            }
+        }
+    }
+}

@@ -227,16 +227,17 @@ body {
         height: auto; } }
 
 .hero-background {
-  background: url("../images/hero_dt@2x.jpg") no-repeat top center;
+  background: url("../images/amex-hero.jpg") no-repeat top center;
   background-size: cover;
-  color: #ffffff; }
+  color: #ffffff;
+  border-top: 2px solid #ffffff; }
   @media screen and (max-width: 767px) {
     .hero-background {
       background: none; } }
   @media screen and (max-width: 767px) {
     .hero-background .hero-container {
       background-color: #152025;
-      background-image: url("../images/mobile-bg.jpg");
+      background-image: url("../images/amex-mobile-bg.jpg");
       background-size: 100%;
       background-position: center bottom;
       background-repeat: no-repeat; } }
@@ -344,7 +345,17 @@ body {
       .hero-background .hero-content .blue-box-mobile a:hover > span img {
         top: 5px; }
 
+_:-ms-input-placeholder, :root .card-box {
+  box-shadow: -1px -1px 34px -5px #8a8a8a; }
+
+_:-ms-fullscreen, :root .card-box {
+  box-shadow: -1px -1px 34px -5px #8a8a8a; }
+
 .cards-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-around; }
   @media screen and (max-width: 767px) {
@@ -362,7 +373,6 @@ body {
     -webkit-box-shadow: -1px -1px 10px -4px #8a8a8a;
     -moz-box-shadow: -1px -1px 10px -4px #8a8a8a;
     box-shadow: -1px -1px 10px -4px #8a8a8a;
-    font-family: 'Guardian Egyptian Regular';
     font-size: 20px;
     position: relative;
     margin: 5px;
@@ -377,8 +387,8 @@ body {
         justify-content: flex-start;
         padding: 20px 20px 20px 20px; } }
     .cards-container div img {
-      height: 55px;
-      width: auto;
+      height: auto;
+      width: 55px;
       margin: 0 auto;
       margin-bottom: 20px; }
       @media screen and (max-width: 767px) {
@@ -395,7 +405,7 @@ body {
         .cards-container div p {
           font-size: 15px;
           text-align: left;
-          padding-left: 30px;
+          padding-left: 15px;
           margin-bottom: 0px;
           line-height: 19px; } }
     .cards-container div::after {
@@ -413,11 +423,17 @@ body {
           bottom: 5px; } }
 
 .form-container {
-  margin-top: 30px; }
+  margin-top: 90px; }
   @media screen and (max-width: 767px) {
     .form-container {
-      padding: 0 20px; } }
+      padding: 0 20px;
+      margin-top: 30px; } }
   .form-container .logo {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 15px; }
     .form-container .logo img {
@@ -442,7 +458,6 @@ body {
           width: 100%;
           padding: 20px; } }
       .form-container .form-section .form-content h2 {
-        font-family: 'Guardian Egyptian light';
         letter-spacing: 2px;
         font-size: 40px;
         line-height: 48px;
@@ -533,6 +548,10 @@ body {
         font-size: 14px;
         padding: 5px 0px 5px 10px; }
         .form-container .form-section .form div div {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
           justify-content: space-between;
           border: none;
@@ -596,7 +615,6 @@ body {
       .global-access > div > div h2 {
         font-size: 40px;
         line-height: 46px;
-        font-family: 'Guardian Egyptian light';
         letter-spacing: 2px;
         margin-bottom: 40px; }
         @media screen and (max-width: 767px) {
@@ -640,6 +658,10 @@ body {
 
 .global-access-cards {
   width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
@@ -673,10 +695,14 @@ body {
     .global-access-cards div h3 {
       color: #00175A;
       margin-bottom: 10px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
       align-items: center;
       font-family: 'Guardian Egyptian Regular';
-      letter-spacing: 1px;
+      letter-spacing: 0px;
       font-size: 20px; }
       @media screen and (max-width: 767px) {
         .global-access-cards div h3 {
@@ -707,12 +733,14 @@ body {
   @media screen and (max-width: 767px) {
     .corner-image {
       position: relative;
-      padding-bottom: 30px;
-      display: block; } }
+      padding-bottom: 40px;
+      display: block;
+      bottom: 0px; } }
 
 .resy-power {
   margin-top: 110px;
-  background: url(../images/amex-resy-power.jpg) no-repeat;
+  background: url(../images/amex-resy-power.jpg) no-repeat center bottom;
+  background-size: cover;
   color: #ffffff; }
   @media screen and (max-width: 767px) {
     .resy-power {
@@ -739,11 +767,12 @@ body {
           border-bottom: 1px solid #D8D8D8;
           border-left: 0px solid #D8D8D8;
           border-right: 0px solid #D8D8D8;
-          padding: 20px 20px; } }
+          padding: 20px 20px;
+          margin-bottom: 30px; } }
       .resy-power .resy-power-container .headline h2 {
         font-size: 40px;
         line-height: 44px;
-        margin-bottom: 30px; }
+        margin-bottom: 10px; }
         @media screen and (max-width: 767px) {
           .resy-power .resy-power-container .headline h2 {
             font-size: 25px;
@@ -757,6 +786,10 @@ body {
       margin: 0 auto;
       width: 100%;
       max-width: 948px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
       justify-content: space-between;
       margin-bottom: 45px; }
@@ -784,64 +817,98 @@ body {
         .resy-power .resy-power-container img {
           width: 169px; } }
 
-.resy-app-container {
-  padding: 90px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto; }
-  @media screen and (max-width: 767px) {
-    .resy-app-container {
-      padding: 0 20px;
-      flex-direction: column-reverse; } }
-  .resy-app-container img {
-    max-width: 500px;
-    width: 100%; }
-  .resy-app-container div {
-    width: 350px; }
+.resy-app {
+  position: relative; }
+  .resy-app .resy-app-container {
+    padding: 90px 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; }
     @media screen and (max-width: 767px) {
-      .resy-app-container div {
-        width: 100%;
-        margin: 50px 0 40px 0; } }
-    .resy-app-container div h2 {
-      font-size: 30px;
-      font-family: 'Guardian Egyptian Regular';
-      letter-spacing: 1px;
-      margin-bottom: 40px;
-      color: #333333; }
+      .resy-app .resy-app-container {
+        padding: 50px 20px;
+        flex-direction: column-reverse; } }
+    .resy-app .resy-app-container img {
+      max-width: 500px;
+      width: 100%; }
+    .resy-app .resy-app-container div {
+      width: 350px; }
       @media screen and (max-width: 767px) {
-        .resy-app-container div h2 {
-          font-size: 25px;
-          margin-bottom: 30px; } }
-    .resy-app-container div p {
-      font-size: 16px;
-      line-height: 25px;
-      color: #333333;
-      padding-left: 20px;
-      border-left: 1px solid #CCE0FF;
-      margin-bottom: 30px; }
-    .resy-app-container div a {
-      font-size: 16px;
-      line-height: 25px;
-      text-decoration: none;
-      color: #5580DE;
-      font-family: 'BentonSansMedium'; }
-      .resy-app-container div a span {
-        width: 8px;
-        height: 12px;
-        position: relative;
-        display: inline-block; }
-        .resy-app-container div a span img {
+        .resy-app .resy-app-container div {
+          width: 100%;
+          margin: 0 0 40px 0; } }
+      .resy-app .resy-app-container div h2 {
+        font-size: 30px;
+        font-family: 'Guardian Egyptian Regular';
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        color: #333333; }
+        @media screen and (max-width: 767px) {
+          .resy-app .resy-app-container div h2 {
+            font-size: 25px;
+            margin-bottom: 30px; } }
+      .resy-app .resy-app-container div p {
+        font-size: 16px;
+        line-height: 25px;
+        color: #333333;
+        padding-left: 20px;
+        border-left: 1px solid #CCE0FF;
+        margin-bottom: 30px; }
+      .resy-app .resy-app-container div a {
+        font-size: 16px;
+        line-height: 25px;
+        text-decoration: none;
+        color: #5580DE;
+        font-family: 'BentonSansMedium'; }
+        .resy-app .resy-app-container div a span {
           width: 8px;
           height: 12px;
-          display: inline-block;
-          position: absolute;
-          top: 0px;
-          left: 0px;
-          transition: all .5s ease 0s; }
-      .resy-app-container div a:hover > span img {
-        left: 5px; }
+          position: relative;
+          display: inline-block; }
+          .resy-app .resy-app-container div a span img {
+            width: 8px;
+            height: 12px;
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: all .5s ease 0s; }
+        .resy-app .resy-app-container div a:hover > span img {
+          left: 5px; }
+  .resy-app:before {
+    content: '';
+    position: absolute;
+    background: #CCE0FF;
+    width: 43%;
+    height: 100%;
+    left: 0px;
+    z-index: -1; }
+    @media screen and (max-width: 767px) {
+      .resy-app:before {
+        width: 100%;
+        height: 30%;
+        bottom: 0px; } }
+
+.resy-footer {
+  background: #006FCF; }
+  .resy-footer .footer {
+    padding: 95px 0; }
+    @media screen and (max-width: 767px) {
+      .resy-footer .footer {
+        padding: 40px 0; } }
+    .resy-footer .footer img {
+      margin: 0 auto;
+      width: 250px;
+      height: auto; }
+      @media screen and (max-width: 767px) {
+        .resy-footer .footer img {
+          width: 210px; } }
 
 /*# sourceMappingURL=app.css.map */

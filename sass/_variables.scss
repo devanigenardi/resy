@@ -3,6 +3,7 @@ $dark-blue: #00175A;
 $grey: #cccccc;
 $dark-grey: #333333;
 $light-blue: #CCE0FF;
+$blue: #006FCF;
 
 // font size 
 
@@ -40,3 +41,11 @@ $light-blue: #CCE0FF;
         line-height: 23px;
     }
 }
+
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
