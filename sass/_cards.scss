@@ -14,7 +14,7 @@ _:-ms-fullscreen, :root .card-box { box-shadow: -1px -1px 34px -5px rgba(138,138
         padding: 25px 20px 15px 20px;
         text-align: center;
         background-color: $white;
-        border: 1px solid $grey;
+        border: 1px solid #E8EAEF;
         border-radius: 5px;
         color: $dark-blue;
         -webkit-box-shadow: -1px -1px 10px -4px rgba(138,138,138,1);
@@ -52,6 +52,8 @@ _:-ms-fullscreen, :root .card-box { box-shadow: -1px -1px 34px -5px rgba(138,138
             line-height: 26px;
             letter-spacing: 0;
             margin-bottom: 40px;
+            font-family: 'Guardian Egyptian Regular';
+            letter-spacing: 0px;
             @media screen and (max-width: 767px) {
                 font-size: 15px;
                 text-align: left;
@@ -65,7 +67,7 @@ _:-ms-fullscreen, :root .card-box { box-shadow: -1px -1px 34px -5px rgba(138,138
             position: absolute;
             width: 90%;
             height: 1px;
-            background: $dark-blue;
+            background: #B6BED0;
             bottom: 15px;
             margin: auto;
             left: 0px;

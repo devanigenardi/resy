@@ -1,0 +1,39 @@
+#button {
+    display: inline-block;
+    background-color: #006FCF;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    cursor: pointer;
+    border: 2px solid $white;
+    img {
+        transform: rotate(-90deg);
+        margin: 7px auto 0 auto;
+    }
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color:#333333;
+  }
+  #button:active {
+    background-color:#333333;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: 767px) {
+    #button {
+      margin: 0px;
+    }
+  }

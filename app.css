@@ -1,661 +1,865 @@
 /* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box; }
-
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 /* Remove default padding */
-ul[class],
-ol[class] {
-  padding: 0; }
-
+ul[class], ol[class] {
+  padding: 0;
+}
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0; }
-
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
 /* Set core body defaults */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5; }
-
+  line-height: 1.5;
+}
 /* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
-  list-style: none; }
-
+ul[class], ol[class] {
+  list-style: none;
+}
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto; }
-
+  text-decoration-skip-ink: auto;
+}
 /* Make images easier to work with */
 img {
   max-width: 100%;
-  display: block; }
-
+  display: block;
+}
 /* Natural flow and rhythm in articles by default */
 article > * + * {
-  margin-top: 1em; }
-
+  margin-top: 1em;
+}
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit; }
-
+input, button, textarea, select {
+  font: inherit;
+}
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important; } }
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+ }
+}
 @font-face {
   font-family: 'Guardian Egyptian Web';
-  src: url("../fonts/GuardianEgyp-Medium-Web.woff") format("woff");
+  src: url("./fonts/GuardianEgyp-Medium-Web.woff") format("woff");
   font-weight: 700;
   font-style: normal;
-  font-stretch: normal; }
+  font-stretch: normal;
+}
 @font-face {
   font-family: 'Guardian Egyptian Regular';
-  src: url("../fonts/GuardianEgyp-Regular-Web.woff") format("woff");
+  src: url("./fonts/GuardianEgyp-Regular-Web.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-stretch: normal; }
+  font-stretch: normal;
+}
 @font-face {
   font-family: 'Guardian Egyptian light';
-  src: url("../fonts/GuardianEgyp-Light-Web.woff") format("woff");
+  src: url("./fonts/GuardianEgyp-Light-Web.woff") format("woff");
   font-weight: 200;
   font-style: normal;
-  font-stretch: normal; }
+  font-stretch: normal;
+}
 @font-face {
   font-family: 'BentonSans';
-  src: url("../fonts/BentonSansBold.woff") format("woff");
+  src: url("./fonts/BentonSansBold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
-  font-stretch: normal; }
+  font-stretch: normal;
+}
 @font-face {
   font-family: 'BentonSansMedium';
-  src: url("../fonts/BentonSansMedium.woff") format("woff");
+  src: url("./fonts/BentonSansMedium.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-stretch: normal; }
+  font-stretch: normal;
+}
 @font-face {
   font-family: 'BentonSansRegular';
-  src: url("../fonts/BentonSansRegular.woff") format("woff");
+  src: url("./fonts/BentonSansRegular.woff") format("woff");
   font-weight: 200;
   font-style: normal;
-  font-stretch: normal; }
+  font-stretch: normal;
+}
 .GuardianEgyp-Light-Web {
   font-family: 'Guardian Egyptian Web';
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
-  text-transform: none; }
-
+  text-transform: none;
+}
 .GuardianEgyp-Regular-Web {
   font-family: 'Guardian Egyptian Web';
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  text-transform: none; }
-
+  text-transform: none;
+}
 .GuardianEgyp-Medium-Web {
   font-family: 'Guardian Egyptian Web';
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  text-transform: none; }
-
+  text-transform: none;
+}
 h1, h2, h3 {
   font-family: 'Guardian Egyptian light';
-  letter-spacing: 2px; }
-
+  letter-spacing: 2px;
+}
 p, a {
-  font-family: 'BentonSansRegular'; }
-
+  font-family: 'BentonSansRegular';
+}
 body {
-  font-family: 'Guardian Egyptian Web'; }
-  body .wrapper {
-    width: 100%; }
-    body .wrapper .slab {
-      margin: 0 auto;
-      max-width: 1440px;
-      width: 100%;
-      padding: 0 20px;
-      overflow: hidden; }
-      @media screen and (max-width: 767px) {
-        body .wrapper .slab {
-          max-width: 480px;
-          padding: 0px; } }
-      body .wrapper .slab .inner-container {
-        width: 100%;
-        max-width: 1140px;
-        margin: 0 auto; }
-    body .wrapper .hero-background {
-      position: relative; }
-      @media screen and (max-width: 767px) {
-        body .wrapper .hero-background {
-          position: initial; } }
-    body .wrapper .cards {
-      position: relative;
-      margin-top: -53px; }
-      @media screen and (max-width: 767px) {
-        body .wrapper .cards {
-          margin-top: -10px; } }
-
+  font-family: 'Guardian Egyptian Web';
+}
+body .wrapper {
+  width: 100%;
+}
+body .wrapper .slab {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  body .wrapper .slab {
+      max-width: 480px;
+      padding: 0px;
+ }
+}
+body .wrapper .slab .inner-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+body .wrapper .hero-background {
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  body .wrapper .hero-background {
+      position: initial;
+ }
+}
+body .wrapper .cards {
+  position: relative;
+  margin-top: -59px;
+}
+@media screen and (max-width: 767px) {
+  body .wrapper .cards {
+      margin-top: -10px;
+ }
+}
+body .test {
+  display: none;
+}
 .fs-45 {
   font-size: 45px;
   line-height: 51px;
-  letter-spacing: 1px; }
-  @media screen and (max-width: 767px) {
-    .fs-45 {
+  letter-spacing: 1px;
+  font-family: 'Guardian Egyptian Web';
+}
+@media screen and (max-width: 767px) {
+  .fs-45 {
       font-size: 34px;
-      line-height: 38px; } }
-
+      line-height: 38px;
+ }
+}
 .fs-20 {
   font-size: 20px;
-  line-height: 31px; }
-
+  line-height: 31px;
+}
 .fs-20-l {
   font-size: 20px;
   line-height: 31px;
   font-family: 'Guardian Egyptian Light';
-  letter-spacing: 1px; }
-  @media screen and (max-width: 767px) {
-    .fs-20-l {
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 767px) {
+  .fs-20-l {
       font-size: 15px;
-      line-height: 19px; } }
-
+      line-height: 19px;
+ }
+}
 .fs-20-Benton-R {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 31px;
-  font-family: 'BentonSansRegular'; }
-  @media screen and (max-width: 767px) {
-    .fs-20-Benton-R {
+  font-family: 'BentonSansRegular';
+}
+@media screen and (max-width: 767px) {
+  .fs-20-Benton-R {
       font-size: 15px;
-      line-height: 23px; } }
-
+      line-height: 23px;
+ }
+}
 .mobile-hero-image {
-  display: none; }
-  @media screen and (max-width: 767px) {
-    .mobile-hero-image {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .mobile-hero-image {
       display: block;
       max-width: 480px;
       width: 100%;
-      margin: 0 auto; } }
-
+      margin: 0 auto;
+ }
+}
 .show-mobile {
-  display: none; }
-  @media screen and (max-width: 767px) {
-    .show-mobile {
-      display: block; } }
-
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .show-mobile {
+      display: block;
+ }
+}
+.hide-mobile {
+  display: block;
+}
 @media screen and (max-width: 767px) {
   .hide-mobile {
-    display: none; } }
-
+      display: none;
+ }
+}
 .nobr {
-  white-space: nowrap; }
-  @media screen and (max-width: 767px) {
-    .nobr {
-      white-space: normal; } }
-
+  white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .nobr {
+      white-space: normal;
+ }
+}
+.hide-mobile-arrow {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .hide-mobile-arrow {
+      display: none;
+ }
+}
+.display-block {
+  display: block;
+}
 .logo-border {
-  border-bottom: 2px solid #00175A; }
+  border-bottom: 2px solid #00175A;
+}
+.logo-border .logo {
+  padding: 20px 0;
+}
+@media screen and (max-width: 767px) {
   .logo-border .logo {
-    padding: 20px 0; }
-    @media screen and (max-width: 767px) {
-      .logo-border .logo {
-        padding-left: 20px;
-        width: 244px;
-        height: auto; } }
-
+      padding-left: 20px;
+      width: 244px;
+      height: auto;
+ }
+}
 .hero-background {
-  background: url("../images/amex-hero.jpg") no-repeat top center;
+  background: url("./images/amex-hero.jpg") no-repeat top center;
   background-size: cover;
   color: #ffffff;
-  border-top: 2px solid #ffffff; }
-  @media screen and (max-width: 767px) {
-    .hero-background {
-      background: none; } }
-  @media screen and (max-width: 767px) {
-    .hero-background .hero-container {
+  border-top: 2px solid #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .hero-background {
+      background: none;
+ }
+}
+@media screen and (max-width: 767px) {
+  .hero-background .hero-container {
       background-color: #152025;
-      background-image: url("../images/amex-mobile-bg.jpg");
+      background-image: url("./images/amex-mobile-bg.jpg");
       background-size: 100%;
       background-position: center bottom;
-      background-repeat: no-repeat; } }
+      background-repeat: no-repeat;
+ }
+}
+.hero-background .blue-box {
+  position: absolute;
+  left: 0px;
+  top: 25px;
+  width: 100%;
+  max-width: 760px;
+  height: 82%;
+  opacity: 0.8;
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00175a+0,002652+100 */
+  background: #00175a;
+ /* Old browsers */
+  background: -moz-linear-gradient(top, #00175a 0%, #002652 100%);
+ /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #00175a 0%, #002652 100%);
+ /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #00175a 0%, #002652 100%);
+ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00175a', endColorstr='#002652',GradientType=0 );
+ /* IE6-9 */
+}
+@media screen and (max-width: 767px) {
   .hero-background .blue-box {
-    background: url("../images/bluebox.png") no-repeat top center;
-    position: absolute;
-    left: 0px;
-    top: 25px;
-    width: 100%;
-    max-width: 760px;
-    height: 80%;
-    opacity: 0.8; }
-    @media screen and (max-width: 767px) {
-      .hero-background .blue-box {
-        display: none; } }
+      display: none;
+ }
+}
+.hero-background .hero-content {
+  padding: 50px 0 110px 0;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
   .hero-background .hero-content {
-    padding: 50px 0 110px 0;
-    position: relative; }
-    @media screen and (max-width: 767px) {
-      .hero-background .hero-content {
-        padding: 0px 0px 66% 0px; } }
-    @media screen and (max-width: 767px) {
-      .hero-background .hero-content .blue-box-mobile {
-        background: url("../images//bluebox-mobile.png") top left;
-        background-repeat: repeat-y;
-        background-size: 100%;
-        padding: 25px 20px 25px 20px;
-        border-top: 20px solid #152025; } }
-    .hero-background .hero-content .blue-box-mobile .healdline-decorative-1 {
-      opacity: 0.5;
+      padding: 0px 0px 66% 0px;
+ }
+}
+@media screen and (max-width: 767px) {
+  .hero-background .hero-content .blue-box-mobile {
       position: relative;
-      padding: 0 0 0 90px;
-      letter-spacing: 0; }
-      @media screen and (max-width: 767px) {
-        .hero-background .hero-content .blue-box-mobile .healdline-decorative-1 {
-          padding: 0 0 0 50px; } }
-      .hero-background .hero-content .blue-box-mobile .healdline-decorative-1::before {
-        content: '';
-        position: absolute;
-        height: 1px;
-        width: 78px;
-        background: #ffffff;
-        left: 0px;
-        top: 10px; }
-        @media screen and (max-width: 767px) {
-          .hero-background .hero-content .blue-box-mobile .healdline-decorative-1::before {
-            width: 40px;
-            top: 7px; } }
-      .hero-background .hero-content .blue-box-mobile .healdline-decorative-1::after {
-        content: '';
-        position: absolute;
-        height: 1px;
-        width: 78px;
-        background: #ffffff;
-        left: 0px;
-        top: 20px; }
-        @media screen and (max-width: 767px) {
-          .hero-background .hero-content .blue-box-mobile .healdline-decorative-1::after {
-            width: 40px;
-            top: 13px; } }
-    .hero-background .hero-content .blue-box-mobile p {
-      margin: 38px 0;
-      max-width: 575px;
-      width: 100%; }
-      @media screen and (max-width: 767px) {
-        .hero-background .hero-content .blue-box-mobile p {
-          padding: 0 20px 20px 0;
-          margin: 20px 0;
-          border-bottom: 1px solid #ffffff; } }
-      .hero-background .hero-content .blue-box-mobile p span {
-        font-family: 'BentonSansMedium'; }
-    .hero-background .hero-content .blue-box-mobile a {
-      color: #ffffff;
-      font-family: 'BentonSans';
-      text-decoration: none;
-      font-size: 20px;
-      max-width: 450px;
-      width: 100%;
-      display: block;
-      position: relative; }
-      @media screen and (max-width: 767px) {
-        .hero-background .hero-content .blue-box-mobile a {
-          font-size: 15px;
-          line-height: 23px;
-          padding-right: 15%; } }
-      .hero-background .hero-content .blue-box-mobile a span {
-        width: 22px;
-        height: 22px;
-        vertical-align: middle;
-        display: inline-block;
-        position: relative;
-        transition: all .5s ease 0s;
-        background: url(../images/svg/circle_amex.png) no-repeat;
-        background-size: contain; }
-        .hero-background .hero-content .blue-box-mobile a span img {
-          position: absolute;
-          margin: auto;
-          top: 0px;
-          left: 0px;
-          right: 0px;
-          bottom: 0px;
-          transition: all .5s ease 0s; }
-      .hero-background .hero-content .blue-box-mobile a:hover > span {
-        opacity: 1; }
-      .hero-background .hero-content .blue-box-mobile a:hover > span img {
-        top: 5px; }
-
+      padding: 25px 20px 25px 20px;
+      border-top: 20px solid #152025;
+ }
+}
+.hero-background .hero-content .blue-box-mobile .blue-box-mobile-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 96%;
+  height: 100%;
+  opacity: 0.7;
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00175a+0,002652+100 */
+  background: #00175a;
+ /* Old browsers */
+  background: -moz-linear-gradient(top, #00175a 0%, #002652 100%);
+ /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #00175a 0%, #002652 100%);
+ /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #00175a 0%, #002652 100%);
+ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00175a', endColorstr='#002652',GradientType=0 );
+ /* IE6-9 */
+}
+.hero-background .hero-content .blue-box-mobile .hero-content-holder {
+  position: relative;
+}
+.hero-background .hero-content .blue-box-mobile .healdline-decorative-1 {
+  opacity: 0.5;
+  position: relative;
+  padding: 0 0 0 90px;
+  letter-spacing: 0;
+}
+@media screen and (max-width: 767px) {
+  .hero-background .hero-content .blue-box-mobile .healdline-decorative-1 {
+      padding: 0 0 0 50px;
+ }
+}
+.hero-background .hero-content .blue-box-mobile .healdline-decorative-1::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 78px;
+  background: #ffffff;
+  left: 0px;
+  top: 10px;
+}
+@media screen and (max-width: 767px) {
+  .hero-background .hero-content .blue-box-mobile .healdline-decorative-1::before {
+      width: 40px;
+      top: 7px;
+ }
+}
+.hero-background .hero-content .blue-box-mobile .healdline-decorative-1::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 78px;
+  background: #ffffff;
+  left: 0px;
+  top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .hero-background .hero-content .blue-box-mobile .healdline-decorative-1::after {
+      width: 40px;
+      top: 13px;
+ }
+}
+.hero-background .hero-content .blue-box-mobile p {
+  margin: 38px 0 30px 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ffffff;
+  max-width: 545px;
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .hero-background .hero-content .blue-box-mobile p {
+      padding: 0 20px 20px 0;
+      margin: 20px 0;
+      border-bottom: 1px solid #ffffff;
+ }
+}
+.hero-background .hero-content .blue-box-mobile p span {
+  font-family: 'BentonSansMedium';
+}
+.hero-background .hero-content .blue-box-mobile a {
+  color: #ffffff;
+  font-family: 'BentonSans';
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 450px;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .hero-background .hero-content .blue-box-mobile a {
+      font-size: 15px;
+      line-height: 23px;
+      padding-right: 15%;
+ }
+}
+.hero-background .hero-content .blue-box-mobile a span {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  transition: all .5s ease 0s;
+  background: url(./images/svg/circle_amex.png) no-repeat;
+  background-size: contain;
+}
+.hero-background .hero-content .blue-box-mobile a span img {
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  transition: all .5s ease 0s;
+}
+.hero-background .hero-content .blue-box-mobile a:hover > span {
+  opacity: 1;
+}
+.hero-background .hero-content .blue-box-mobile a:hover > span img {
+  top: 5px;
+}
 _:-ms-input-placeholder, :root .card-box {
-  box-shadow: -1px -1px 34px -5px #8a8a8a; }
-
+  box-shadow: -1px -1px 34px -5px #8a8a8a;
+}
 _:-ms-fullscreen, :root .card-box {
-  box-shadow: -1px -1px 34px -5px #8a8a8a; }
-
+  box-shadow: -1px -1px 34px -5px #8a8a8a;
+}
 .cards-container {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-around; }
-  @media screen and (max-width: 767px) {
-    .cards-container {
-      flex-direction: column; } }
+  justify-content: space-around;
+}
+@media screen and (max-width: 767px) {
+  .cards-container {
+      flex-direction: column;
+ }
+}
+.cards-container div {
+  max-width: 326px;
+  width: 100%;
+  padding: 25px 20px 15px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #E8EAEF;
+  border-radius: 5px;
+  color: #00175A;
+  -webkit-box-shadow: -1px -1px 10px -4px #8a8a8a;
+  -moz-box-shadow: -1px -1px 10px -4px #8a8a8a;
+  box-shadow: -1px -1px 10px -4px #8a8a8a;
+  font-size: 20px;
+  position: relative;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 767px) {
   .cards-container div {
-    max-width: 326px;
-    width: 100%;
-    padding: 25px 20px 15px 20px;
-    text-align: center;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    color: #00175A;
-    -webkit-box-shadow: -1px -1px 10px -4px #8a8a8a;
-    -moz-box-shadow: -1px -1px 10px -4px #8a8a8a;
-    box-shadow: -1px -1px 10px -4px #8a8a8a;
-    font-size: 20px;
-    position: relative;
-    margin: 5px;
-    display: flex;
-    flex-direction: column; }
-    @media screen and (max-width: 767px) {
-      .cards-container div {
-        margin: 0px auto 20px auto;
-        max-width: 90%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 20px 20px 20px 20px; } }
-    .cards-container div img {
-      height: auto;
-      width: 55px;
-      margin: 0 auto;
-      margin-bottom: 20px; }
-      @media screen and (max-width: 767px) {
-        .cards-container div img {
-          margin: initial;
-          width: 39px;
-          height: 39px;
-          margin-left: 10px; } }
-    .cards-container div p {
-      line-height: 26px;
-      letter-spacing: 0;
-      margin-bottom: 40px; }
-      @media screen and (max-width: 767px) {
-        .cards-container div p {
-          font-size: 15px;
-          text-align: left;
-          padding-left: 15px;
-          margin-bottom: 0px;
-          line-height: 19px; } }
-    .cards-container div::after {
-      content: '';
-      position: absolute;
-      width: 90%;
-      height: 1px;
-      background: #00175A;
-      bottom: 15px;
-      margin: auto;
-      left: 0px;
-      right: 0px; }
-      @media screen and (max-width: 767px) {
-        .cards-container div::after {
-          bottom: 5px; } }
-
+      margin: 0px auto 20px auto;
+      max-width: 90%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px 20px 20px 20px;
+ }
+}
+.cards-container div img {
+  height: auto;
+  width: 55px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .cards-container div img {
+      margin: initial;
+      width: 39px;
+      height: 39px;
+      margin-left: 10px;
+ }
+}
+.cards-container div p {
+  line-height: 26px;
+  letter-spacing: 0;
+  margin-bottom: 40px;
+  font-family: 'Guardian Egyptian Regular';
+  letter-spacing: 0px;
+}
+@media screen and (max-width: 767px) {
+  .cards-container div p {
+      font-size: 15px;
+      text-align: left;
+      padding-left: 15px;
+      margin-bottom: 0px;
+      line-height: 19px;
+ }
+}
+.cards-container div::after {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  background: #B6BED0;
+  bottom: 15px;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+}
+@media screen and (max-width: 767px) {
+  .cards-container div::after {
+      bottom: 5px;
+ }
+}
 .form-container {
-  margin-top: 90px; }
-  @media screen and (max-width: 767px) {
-    .form-container {
+  margin-top: 90px;
+}
+@media screen and (max-width: 767px) {
+  .form-container {
       padding: 0 20px;
-      margin-top: 30px; } }
-  .form-container .logo {
-    overflow: hidden;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 15px; }
-    .form-container .logo img {
-      height: 38px;
-      width: auto; }
-    .form-container .logo .bar {
-      height: 38px;
+      margin-top: 30px;
+ }
+}
+.form-container .logo {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+.form-container .logo img {
+  height: 38px;
+  width: auto;
+}
+.form-container .logo .bar {
+  height: 38px;
+  width: 100%;
+  background: #CCE0FF;
+  margin-left: 20px;
+}
+.form-container .form-section {
+  font-family: 'BentonSansRegular';
+}
+.form-container .form-section .form-content {
+  background: #CCE0FF;
+  padding: 70px 130px 40px 30px;
+  width: 64%;
+  color: #333333;
+  float: left;
+}
+@media screen and (max-width: 767px) {
+  .form-container .form-section .form-content {
+      display: block;
       width: 100%;
-      background: #CCE0FF;
-      margin-left: 20px; }
-  .form-container .form-section {
-    font-family: 'BentonSansRegular'; }
-    .form-container .form-section .form-content {
-      background: #CCE0FF;
-      padding: 70px 130px 40px 30px;
-      width: 64%;
-      color: #333333;
-      float: left; }
-      @media screen and (max-width: 767px) {
-        .form-container .form-section .form-content {
-          display: block;
-          width: 100%;
-          padding: 20px; } }
-      .form-container .form-section .form-content h2 {
-        letter-spacing: 2px;
-        font-size: 40px;
-        line-height: 48px;
-        margin-bottom: 35px; }
-        @media screen and (max-width: 767px) {
-          .form-container .form-section .form-content h2 {
-            font-size: 25px;
-            line-height: 31px;
-            margin-bottom: 20px;
-            letter-spacing: 1px; } }
-      .form-container .form-section .form-content > p {
-        font-size: 20px;
-        line-height: 48px;
-        line-height: 26px;
-        margin-bottom: 35px; }
-        @media screen and (max-width: 767px) {
-          .form-container .form-section .form-content > p {
-            font-size: 18px;
-            line-height: 23px;
-            margin-bottom: 20px; } }
-      .form-container .form-section .form-content div {
-        border-left: 2px solid #ffffff;
-        padding-left: 20px;
-        position: relative; }
-        @media screen and (max-width: 767px) {
-          .form-container .form-section .form-content div {
-            padding-left: 0px;
-            border: none; } }
-        .form-container .form-section .form-content div p {
-          font-size: 16px;
-          line-height: 24px; }
-          .form-container .form-section .form-content div p:first-child {
-            margin-bottom: 30px; }
-            @media screen and (max-width: 767px) {
-              .form-container .form-section .form-content div p:first-child {
-                margin-bottom: 20px;
-                font-size: 15px;
-                line-height: 21px; } }
-          .form-container .form-section .form-content div p span {
-            font-family: 'BentonSansMedium'; }
-        .form-container .form-section .form-content div::before {
-          content: '';
-          position: absolute;
-          height: 30px;
-          width: 11px;
-          background: url(../images/svg/arrow_white_amex.svg) no-repeat;
-          left: -1px;
-          bottom: 8px; }
-          @media screen and (max-width: 767px) {
-            .form-container .form-section .form-content div::before {
-              display: none; } }
-    .form-container .form-section .form-hidden {
-      padding: 35px 30px 60px 40px;
-      position: relative; }
-      .form-container .form-section .form-hidden::before {
-        content: '';
-        position: absolute;
-        height: 40px;
-        width: 14px;
-        background: url(../images/svg/arrow_white_amex.svg) no-repeat;
-        left: -1px;
-        top: 30px;
-        background-size: contain; }
-    .form-container .form-section .form {
-      width: 36%;
-      background-color: #006FCF;
-      padding: 30px 40px;
-      color: #ffffff;
-      float: right;
-      border-radius: 2px; }
-      @media screen and (max-width: 767px) {
-        .form-container .form-section .form {
-          display: block;
-          width: 100vw;
-          margin: 0 -20px;
-          padding: 40px 20px;
-          max-width: 480px; } }
-      .form-container .form-section .form h2 {
-        font-family: 'BentonSansMedium';
-        font-size: 20px;
-        letter-spacing: 1px;
-        padding-bottom: 15px;
-        margin-bottom: 15px;
-        border-bottom: 1px solid #D8D8D8; }
-      .form-container .form-section .form div {
-        border-left: 1px solid #D8D8D8;
-        margin-bottom: 15px;
-        font-size: 14px;
-        padding: 5px 0px 5px 10px; }
-        .form-container .form-section .form div div {
-          display: -webkit-box;
-          display: -moz-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          justify-content: space-between;
-          border: none;
-          padding: 0;
-          margin: 0; }
-        .form-container .form-section .form div input {
-          display: block;
-          width: 100%;
-          border: 0;
-          outline: 0;
-          padding: 10px;
-          border-radius: 2px; }
-      .form-container .form-section .form button {
-        margin-top: 30px;
-        text-align: center;
-        width: 100%;
-        padding: 15px;
-        color: #006FCF;
-        font-family: 'BentonSansMedium';
-        border-radius: 2px;
-        outline: 0;
-        border: 1px solid #ffffff;
-        transition: all .5s ease 0s;
-        cursor: pointer;
-        background: #ffffff; }
-        .form-container .form-section .form button:hover {
-          background: #006FCF;
-          color: #ffffff;
-          border: 1px solid #ffffff; }
-
+      padding: 20px;
+ }
+}
+.form-container .form-section .form-content h2 {
+  letter-spacing: 2px;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 767px) {
+  .form-container .form-section .form-content h2 {
+      font-size: 25px;
+      line-height: 31px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+ }
+}
+.form-container .form-section .form-content > p {
+  font-size: 20px;
+  line-height: 48px;
+  line-height: 26px;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 767px) {
+  .form-container .form-section .form-content > p {
+      font-size: 18px;
+      line-height: 23px;
+      margin-bottom: 20px;
+ }
+}
+.form-container .form-section .form-content div {
+  border-left: 2px solid #ffffff;
+  padding-left: 20px;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .form-container .form-section .form-content div {
+      padding-left: 0px;
+      border: none;
+ }
+}
+.form-container .form-section .form-content div .white-arrow {
+  position: absolute;
+  height: 30px;
+  width: 11px;
+  left: -1px;
+  bottom: 76%;
+}
+@media screen and (max-width: 767px) {
+  .form-container .form-section .form-content div .white-arrow {
+      display: none;
+ }
+}
+.form-container .form-section .form-content div p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.form-container .form-section .form-content div p:first-child {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  .form-container .form-section .form-content div p:first-child {
+      margin-bottom: 20px;
+      font-size: 15px;
+      line-height: 21px;
+ }
+}
+.form-container .form-section .form-content div p span {
+  font-family: 'BentonSansMedium';
+}
+.form-container .form-section .form-hidden {
+  padding: 35px 30px 60px 40px;
+  position: relative;
+}
+.form-container .form-section .form-hidden::before {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 14px;
+  background: url(./images/svg/arrow_white_amex.svg) no-repeat;
+  left: -1px;
+  top: 30px;
+  background-size: contain;
+}
+.form-container .form-section .form {
+  width: 36%;
+  background-color: #006FCF;
+  padding: 30px 40px;
+  color: #ffffff;
+  float: right;
+  border-radius: 2px;
+}
+@media screen and (max-width: 767px) {
+  .form-container .form-section .form {
+      display: block;
+      width: 100vw;
+      margin: 0 -20px;
+      padding: 40px 20px;
+      max-width: 480px;
+ }
+}
+.form-container .form-section .form h2 {
+  font-family: 'BentonSansMedium';
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #D8D8D8;
+}
+.form-container .form-section .form div {
+  border-left: 1px solid #D8D8D8;
+  margin-bottom: 15px;
+  font-size: 14px;
+  padding: 5px 0px 5px 10px;
+}
+.form-container .form-section .form div div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.form-container .form-section .form div input {
+  display: block;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  border-radius: 2px;
+}
+.form-container .form-section .form button {
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  color: #006FCF;
+  font-family: 'BentonSansMedium';
+  border-radius: 2px;
+  outline: 0;
+  border: 1px solid #ffffff;
+  transition: all .5s ease 0s;
+  cursor: pointer;
+  background: #ffffff;
+}
+.form-container .form-section .form button:hover {
+  background: #006FCF;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
 @media screen and (max-width: 767px) {
   .global-access, .global-access-cards {
-    padding: 0 20px; } }
-  @media screen and (max-width: 767px) and (max-width: 767px) {
-    .global-access, .global-access-cards {
-      padding: 0; } }
-
+      padding: 0 20px;
+ }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .global-access, .global-access-cards {
+      padding: 0;
+ }
+}
 .global-access {
   padding-top: 70px;
   margin: 70px 0 80px 0;
   border-top: 1px solid #00175A;
-  color: #ffffff; }
-  @media screen and (max-width: 767px) {
-    .global-access {
-      margin: 30px 0 30px 0; } }
-  .global-access > div {
-    width: 100%;
-    background: url(../images/amex-global-access.jpg) no-repeat;
-    background-size: cover; }
-    @media screen and (max-width: 767px) {
-      .global-access > div {
-        background: url(../images/amex-global-access-mobile.jpg) no-repeat;
-        background-size: contain; } }
-    .global-access > div > div {
-      max-width: 615px;
-      width: 100%;
-      padding: 180px 20px 0 25px; }
-      @media screen and (max-width: 767px) {
-        .global-access > div > div {
-          padding: 70px 0px 0 0px; } }
-      .global-access > div > div h2 {
-        font-size: 40px;
-        line-height: 46px;
-        letter-spacing: 2px;
-        margin-bottom: 40px; }
-        @media screen and (max-width: 767px) {
-          .global-access > div > div h2 {
-            font-size: 25px;
-            line-height: 31px;
-            max-width: 250px;
-            padding: 0 20px; } }
-      .global-access > div > div div {
-        font-family: 'BentonSansRegular';
-        color: #333333;
-        padding: 50px 75px 0 25px;
-        background: #ffffff;
-        font-size: 16px;
-        line-height: 25px;
-        margin: 0 40px 0 -25px; }
-        @media screen and (max-width: 767px) {
-          .global-access > div > div div {
-            padding: 20px;
-            margin: -20px 0 0 0;
-            width: 95%; } }
-        .global-access > div > div div p {
-          border-left: 2px solid #CCE0FF;
-          padding-left: 25px;
-          margin-left: -25px; }
-          @media screen and (max-width: 767px) {
-            .global-access > div > div div p {
-              margin-left: 0px;
-              font-size: 15px; } }
-
+  color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .global-access {
+      margin: 30px 0 30px 0;
+ }
+}
+.global-access .bcg-parallax {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 1023px) {
+  .global-access .bcg-parallax {
+      background: url(./images/amex-global-access.jpg) no-repeat center top;
+      background-size: cover;
+ }
+}
+@media screen and (max-width: 767px) {
+  .global-access .bcg-parallax {
+      background: url(./images/amex-global-access-mobile.jpg) no-repeat;
+      background-size: contain;
+ }
+}
+.global-access .bcg-parallax .bcg {
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  left: 0px;
+  top: 0px;
+  background: url(./images/amex-global-access.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  z-index: -1;
+}
+@media screen and (max-width: 1023px) {
+  .global-access .bcg-parallax .bcg {
+      display: none;
+ }
+}
+.global-access .bcg-parallax .content-wrapper {
+  max-width: 615px;
+  width: 100%;
+  padding: 180px 20px 0 25px;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .global-access .bcg-parallax .content-wrapper {
+      padding: 70px 0px 0 0px;
+ }
+}
+.global-access .bcg-parallax .content-wrapper .ribbon {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+}
+@media screen and (max-width: 767px) {
+  .global-access .bcg-parallax .content-wrapper .ribbon {
+      display: none;
+ }
+}
+.global-access .bcg-parallax .content-wrapper h2 {
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .global-access .bcg-parallax .content-wrapper h2 {
+      font-size: 25px;
+      line-height: 31px;
+      max-width: 250px;
+      padding: 0 20px;
+ }
+}
+.global-access .bcg-parallax .content-wrapper div {
+  font-family: 'BentonSansRegular';
+  color: #333333;
+  padding: 50px 75px 0 25px;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0 40px 0 -25px;
+}
+@media screen and (max-width: 767px) {
+  .global-access .bcg-parallax .content-wrapper div {
+      padding: 20px;
+      margin: -20px 0 0 0;
+      width: 95%;
+ }
+}
+.global-access .bcg-parallax .content-wrapper div p {
+  border-left: 2px solid #CCE0FF;
+  padding-left: 25px;
+  margin-left: -25px;
+}
+@media screen and (max-width: 767px) {
+  .global-access .bcg-parallax .content-wrapper div p {
+      margin-left: 0px;
+      font-size: 15px;
+ }
+}
 .global-access-cards-bg {
-  position: relative; }
-  .global-access-cards-bg::after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    height: 2px;
-    width: 40%;
-    background: #CCE0FF; }
-
+  position: relative;
+}
+.global-access-cards-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 2px;
+  width: 40%;
+  background: #CCE0FF;
+}
 .global-access-cards {
   width: 100%;
   display: -webkit-box;
@@ -664,251 +868,398 @@ _:-ms-fullscreen, :root .card-box {
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+}
+.global-access-cards:last-child {
+  margin: 0px 0 110px 0;
+}
+@media screen and (max-width: 767px) {
   .global-access-cards:last-child {
-    margin: 0px 0 110px 0; }
-    @media screen and (max-width: 767px) {
-      .global-access-cards:last-child {
-        margin: 0px 0 25px 0; } }
-  @media screen and (max-width: 767px) {
-    .global-access-cards {
-      flex-direction: column; } }
+      margin: 0px 0 25px 0;
+ }
+}
+@media screen and (max-width: 767px) {
+  .global-access-cards {
+      flex-direction: column;
+ }
+}
+.global-access-cards .pull-left {
+  margin-left: -20px;
+}
+@media screen and (max-width: 767px) {
   .global-access-cards .pull-left {
-    margin-left: -20px; }
-    @media screen and (max-width: 767px) {
-      .global-access-cards .pull-left {
-        margin-left: 0px; } }
+      margin-left: 0px;
+ }
+}
+.global-access-cards .pull-right {
+  margin-right: -20px;
+}
+@media screen and (max-width: 767px) {
   .global-access-cards .pull-right {
-    margin-right: -20px; }
-    @media screen and (max-width: 767px) {
-      .global-access-cards .pull-right {
-        margin-right: 0px; } }
+      margin-right: 0px;
+ }
+}
+.global-access-cards div {
+  width: 33%;
+  margin-bottom: 65px;
+  padding: 0 20px;
+}
+@media screen and (max-width: 767px) {
   .global-access-cards div {
-    width: 33%;
-    margin-bottom: 65px;
-    padding: 0 20px; }
-    @media screen and (max-width: 767px) {
-      .global-access-cards div {
-        padding: 0 20px;
-        width: 100%;
-        margin-bottom: 30px; } }
-    .global-access-cards div h3 {
-      color: #00175A;
-      margin-bottom: 10px;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      align-items: center;
-      font-family: 'Guardian Egyptian Regular';
-      letter-spacing: 0px;
-      font-size: 20px; }
-      @media screen and (max-width: 767px) {
-        .global-access-cards div h3 {
-          letter-spacing: 1px;
-          font-size: 18px; } }
-      .global-access-cards div h3 img {
-        margin-right: 10px; }
-    .global-access-cards div p {
-      font-family: 'BentonSansRegular';
-      color: #333333; }
-      @media screen and (max-width: 767px) {
-        .global-access-cards div p {
-          font-size: 15px;
-          line-break: 23px; } }
+      padding: 0 20px;
+      width: 100%;
+      margin-bottom: 30px;
+ }
+}
+.global-access-cards div h3 {
+  color: #00175A;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  font-family: 'Guardian Egyptian Regular';
+  letter-spacing: 0px;
+  font-size: 20px;
+}
+@media screen and (max-width: 767px) {
+  .global-access-cards div h3 {
+      letter-spacing: 1px;
+      font-size: 18px;
+      align-items: flex-start;
+ }
+}
+.global-access-cards div h3 img {
+  margin-right: 10px;
+}
+.global-access-cards div p {
+  font-family: 'BentonSansRegular';
+  color: #333333;
+}
+@media screen and (max-width: 767px) {
+  .global-access-cards div p {
+      font-size: 15px;
+      line-break: 23px;
+ }
+}
+.global-access-cards .extra-padding {
+  background: #ffffff;
+  padding: 0px 20px 20px 20px;
+}
+@media screen and (max-width: 767px) {
   .global-access-cards .extra-padding {
-    background: #ffffff;
-    padding: 0px 20px 20px 20px; }
-    @media screen and (max-width: 767px) {
-      .global-access-cards .extra-padding {
-        margin-bottom: 0px; } }
-
+      margin-bottom: 0px;
+ }
+}
 .corner-image {
-  display: block;
   position: absolute;
   bottom: -10px;
   left: 0px;
-  z-index: -1; }
-  @media screen and (max-width: 767px) {
-    .corner-image {
+  z-index: -1;
+  width: 420px;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  .corner-image {
       position: relative;
-      padding-bottom: 40px;
-      display: block;
-      bottom: 0px; } }
-
+      padding: 0 15px 40px 0;
+      bottom: 0px;
+ }
+}
 .resy-power {
   margin-top: 110px;
-  background: url(../images/amex-resy-power.jpg) no-repeat center bottom;
   background-size: cover;
-  color: #ffffff; }
-  @media screen and (max-width: 767px) {
-    .resy-power {
-      background: url(../images/amex-resy-power-mobile.jpg) no-repeat;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 1023px) {
+  .resy-power {
+      background: url(./images/amex-resy-power.jpg) no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+ }
+}
+@media screen and (max-width: 767px) {
+  .resy-power {
+      background: url(./images/amex-resy-power-mobile.jpg) no-repeat;
       background-color: #006FCF;
       background-size: cover;
-      background-position: center bottom; } }
+      background-position: center bottom;
+ }
+}
+.resy-power .bcg2 {
+  height: 110%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: url(./images/amex-resy-power.jpg) no-repeat center bottom;
+  z-index: -1;
+  background-size: cover;
+}
+@media screen and (max-width: 1023px) {
+  .resy-power .bcg2 {
+      display: none;
+ }
+}
+.resy-power .flourish {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  .resy-power .flourish {
+      display: none;
+ }
+}
+.resy-power .resy-power-container {
+  padding: 90px 20px 110px;
+}
+@media screen and (max-width: 767px) {
   .resy-power .resy-power-container {
-    padding: 90px 20px 110px; }
-    @media screen and (max-width: 767px) {
-      .resy-power .resy-power-container {
-        padding: 30px 0 60px; } }
-    .resy-power .resy-power-container .headline {
-      text-align: center;
-      border: 1px solid #D8D8D8;
-      padding: 25px 200px;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 948px;
-      margin-bottom: 50px; }
-      @media screen and (max-width: 767px) {
-        .resy-power .resy-power-container .headline {
-          border-top: 1px solid #D8D8D8;
-          border-bottom: 1px solid #D8D8D8;
-          border-left: 0px solid #D8D8D8;
-          border-right: 0px solid #D8D8D8;
-          padding: 20px 20px;
-          margin-bottom: 30px; } }
-      .resy-power .resy-power-container .headline h2 {
-        font-size: 40px;
-        line-height: 44px;
-        margin-bottom: 10px; }
-        @media screen and (max-width: 767px) {
-          .resy-power .resy-power-container .headline h2 {
-            font-size: 25px;
-            margin-bottom: 20px;
-            letter-spacing: 1px; } }
-      @media screen and (max-width: 767px) {
-        .resy-power .resy-power-container .headline p {
-          font-size: 16px;
-          line-height: 25px; } }
-    .resy-power .resy-power-container .info {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 948px;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 45px; }
-      @media screen and (max-width: 767px) {
-        .resy-power .resy-power-container .info {
-          padding: 0 20px;
-          flex-direction: column; } }
-      .resy-power .resy-power-container .info p {
-        max-width: 425px;
-        width: 100%;
-        font-size: 16px;
-        line-height: 25px; }
-        @media screen and (max-width: 767px) {
-          .resy-power .resy-power-container .info p {
-            font-size: 16px;
-            line-height: 25px; } }
-        @media screen and (max-width: 767px) {
-          .resy-power .resy-power-container .info p:first-child {
-            margin-bottom: 20px; } }
-    .resy-power .resy-power-container img {
-      margin: 0 auto;
-      width: 220px;
-      height: auto; }
-      @media screen and (max-width: 767px) {
-        .resy-power .resy-power-container img {
-          width: 169px; } }
-
+      padding: 30px 0 60px;
+ }
+}
+.resy-power .resy-power-container .headline {
+  text-align: center;
+  border: 1px solid #D8D8D8;
+  padding: 25px 200px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 948px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .resy-power .resy-power-container .headline {
+      border-top: 1px solid #D8D8D8;
+      border-bottom: 1px solid #D8D8D8;
+      border-left: 0px solid #D8D8D8;
+      border-right: 0px solid #D8D8D8;
+      padding: 20px 20px;
+      margin-bottom: 30px;
+ }
+}
+.resy-power .resy-power-container .headline h2 {
+  font-size: 40px;
+  line-height: 44px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .resy-power .resy-power-container .headline h2 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+ }
+}
+@media screen and (max-width: 767px) {
+  .resy-power .resy-power-container .headline p {
+      font-size: 16px;
+      line-height: 25px;
+ }
+}
+.resy-power .resy-power-container .info {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 948px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 767px) {
+  .resy-power .resy-power-container .info {
+      padding: 0 20px;
+      flex-direction: column;
+ }
+}
+.resy-power .resy-power-container .info p {
+  max-width: 425px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 25px;
+}
+@media screen and (max-width: 767px) {
+  .resy-power .resy-power-container .info p {
+      font-size: 16px;
+      line-height: 25px;
+ }
+}
+@media screen and (max-width: 767px) {
+  .resy-power .resy-power-container .info p:first-child {
+      margin-bottom: 20px;
+ }
+}
+.resy-power .resy-power-container img {
+  margin: 0 auto;
+  width: 220px;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  .resy-power .resy-power-container img {
+      width: 169px;
+ }
+}
 .resy-app {
-  position: relative; }
+  position: relative;
+}
+.resy-app .resy-app-container {
+  padding: 90px 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
   .resy-app .resy-app-container {
-    padding: 90px 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto; }
-    @media screen and (max-width: 767px) {
-      .resy-app .resy-app-container {
-        padding: 50px 20px;
-        flex-direction: column-reverse; } }
-    .resy-app .resy-app-container img {
-      max-width: 500px;
-      width: 100%; }
-    .resy-app .resy-app-container div {
-      width: 350px; }
-      @media screen and (max-width: 767px) {
-        .resy-app .resy-app-container div {
-          width: 100%;
-          margin: 0 0 40px 0; } }
-      .resy-app .resy-app-container div h2 {
-        font-size: 30px;
-        font-family: 'Guardian Egyptian Regular';
-        letter-spacing: 1px;
-        margin-bottom: 40px;
-        color: #333333; }
-        @media screen and (max-width: 767px) {
-          .resy-app .resy-app-container div h2 {
-            font-size: 25px;
-            margin-bottom: 30px; } }
-      .resy-app .resy-app-container div p {
-        font-size: 16px;
-        line-height: 25px;
-        color: #333333;
-        padding-left: 20px;
-        border-left: 1px solid #CCE0FF;
-        margin-bottom: 30px; }
-      .resy-app .resy-app-container div a {
-        font-size: 16px;
-        line-height: 25px;
-        text-decoration: none;
-        color: #5580DE;
-        font-family: 'BentonSansMedium'; }
-        .resy-app .resy-app-container div a span {
-          width: 8px;
-          height: 12px;
-          position: relative;
-          display: inline-block; }
-          .resy-app .resy-app-container div a span img {
-            width: 8px;
-            height: 12px;
-            display: inline-block;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            transition: all .5s ease 0s; }
-        .resy-app .resy-app-container div a:hover > span img {
-          left: 5px; }
+      padding: 50px 20px;
+      flex-direction: column-reverse;
+ }
+}
+.resy-app .resy-app-container img {
+  max-width: 500px;
+  width: 100%;
+}
+.resy-app .resy-app-container div {
+  width: 350px;
+}
+@media screen and (max-width: 767px) {
+  .resy-app .resy-app-container div {
+      width: 100%;
+      margin: 0 0 40px 0;
+ }
+}
+.resy-app .resy-app-container div h2 {
+  font-size: 30px;
+  font-family: 'Guardian Egyptian Regular';
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  color: #333333;
+}
+@media screen and (max-width: 767px) {
+  .resy-app .resy-app-container div h2 {
+      font-size: 25px;
+      margin-bottom: 30px;
+ }
+}
+.resy-app .resy-app-container div p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #333333;
+  padding-left: 20px;
+  border-left: 1px solid #CCE0FF;
+  margin-bottom: 30px;
+}
+.resy-app .resy-app-container div a {
+  font-size: 16px;
+  line-height: 25px;
+  text-decoration: none;
+  color: #5580DE;
+  font-family: 'BentonSansMedium';
+}
+.resy-app .resy-app-container div a span {
+  width: 8px;
+  height: 12px;
+  position: relative;
+  display: inline-block;
+}
+.resy-app .resy-app-container div a span img {
+  width: 8px;
+  height: 12px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all .5s ease 0s;
+}
+.resy-app .resy-app-container div a:hover > span img {
+  left: 5px;
+}
+.resy-app:before {
+  content: '';
+  position: absolute;
+  background: #CCE0FF;
+  width: 43%;
+  height: 100%;
+  left: 0px;
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
   .resy-app:before {
-    content: '';
-    position: absolute;
-    background: #CCE0FF;
-    width: 43%;
-    height: 100%;
-    left: 0px;
-    z-index: -1; }
-    @media screen and (max-width: 767px) {
-      .resy-app:before {
-        width: 100%;
-        height: 30%;
-        bottom: 0px; } }
-
+      width: 100%;
+      height: 30%;
+      bottom: 0px;
+ }
+}
 .resy-footer {
-  background: #006FCF; }
+  background: #006FCF;
+}
+.resy-footer .footer {
+  padding: 95px 0;
+}
+@media screen and (max-width: 767px) {
   .resy-footer .footer {
-    padding: 95px 0; }
-    @media screen and (max-width: 767px) {
-      .resy-footer .footer {
-        padding: 40px 0; } }
-    .resy-footer .footer img {
-      margin: 0 auto;
-      width: 250px;
-      height: auto; }
-      @media screen and (max-width: 767px) {
-        .resy-footer .footer img {
-          width: 210px; } }
-
+      padding: 40px 0;
+ }
+}
+.resy-footer .footer img {
+  margin: 0 auto;
+  width: 250px;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  .resy-footer .footer img {
+      width: 210px;
+ }
+}
+#button {
+  display: inline-block;
+  background-color: #006FCF;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+}
+#button img {
+  transform: rotate(-90deg);
+  margin: 7px auto 0 auto;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333333;
+}
+#button:active {
+  background-color: #333333;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 767px) {
+  #button {
+      margin: 0px;
+ }
+}
 /*# sourceMappingURL=app.css.map */

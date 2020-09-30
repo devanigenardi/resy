@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Guardian Egyptian Web';
 
@@ -32,11 +33,13 @@ body {
 
         .cards {
             position: relative;
-            margin-top: -53px;
+            margin-top: -59px;
             @media screen and (max-width: 767px) {
                 margin-top: -10px;
             }
         }
     }
-
+    .test {
+        display: none;
+    }
 }

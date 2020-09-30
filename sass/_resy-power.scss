@@ -1,13 +1,43 @@
 .resy-power {
     margin-top: 110px;
-    background: url(../images/amex-resy-power.jpg) no-repeat center bottom;
     background-size: cover;
     color: $white;
+    overflow: hidden;
+    position: relative;
+    @media screen and (max-width: 1023px) {
+        background: url(../images/amex-resy-power.jpg) no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+    }
     @media screen and (max-width: 767px) {
         background: url(../images/amex-resy-power-mobile.jpg) no-repeat;
         background-color: #006FCF;
         background-size: cover;
         background-position: center bottom;
+    }
+    .bcg2 {
+        height: 110%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background: url(../images/amex-resy-power.jpg) no-repeat center bottom;
+        z-index: -1;
+        background-size: cover;
+
+        @media screen and (max-width: 1023px) {
+            display: none;
+        }
+    }
+    .flourish {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: auto;
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
     .resy-power-container {
         padding: 90px 20px 110px;

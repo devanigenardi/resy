@@ -31,14 +31,20 @@
     }
 
     .blue-box {
-        background: url("../images/bluebox.png") no-repeat top center;
         position: absolute;
         left: 0px;
         top: 25px;
         width: 100%;
         max-width: 760px;
-        height: 80%;
+        height: 82%;
         opacity: 0.8;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00175a+0,002652+100 */
+        background: #00175a; /* Old browsers */
+        background: -moz-linear-gradient(top,  #00175a 0%, #002652 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #00175a 0%,#002652 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #00175a 0%,#002652 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00175a', endColorstr='#002652',GradientType=0 ); /* IE6-9 */
+
         @media screen and (max-width: 767px) {
             display: none;
         }
@@ -53,11 +59,27 @@
 
             .blue-box-mobile {
                 @media screen and (max-width: 767px) {
-                    background: url("../images//bluebox-mobile.png") top left;
-                    background-repeat: repeat-y;
-                    background-size: 100%;
+                    position: relative;
                     padding: 25px 20px 25px 20px;
                     border-top: 20px solid #152025;
+                }
+                .blue-box-mobile-bg {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 96%;
+                    height: 100%;
+                    opacity: 0.7;
+                    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00175a+0,002652+100 */
+                    background: #00175a; /* Old browsers */
+                    background: -moz-linear-gradient(top,  #00175a 0%, #002652 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(top,  #00175a 0%,#002652 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to bottom,  #00175a 0%,#002652 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00175a', endColorstr='#002652',GradientType=0 ); /* IE6-9 */
+                }
+
+                .hero-content-holder {
+                    position: relative;
                 }
                 .healdline-decorative-1 {
                     opacity: 0.5;
@@ -98,9 +120,12 @@
                 }
         
                 p {
-                    margin: 38px 0;
-                    max-width: 575px;
+                    margin: 38px 0 30px 0;
+                    padding-bottom: 30px;
+                    border-bottom: 1px solid $white;
+                    max-width: 545px;
                     width: 100%;
+                    position: relative;
                     @media screen and (max-width: 767px) {
                         padding: 0 20px 20px 0;
                         margin: 20px 0;
@@ -117,6 +142,7 @@
                     font-family: 'BentonSans';
                     text-decoration: none;
                     font-size: 20px;
+                    line-height: 30px;
                     max-width: 450px;
                     width: 100%;
                     display: block;
