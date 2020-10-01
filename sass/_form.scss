@@ -167,13 +167,14 @@
                 outline: 0;
                 border: 1px solid $white;
                 transition: all .5s ease 0s;
+                opacity: 0.5;
                 cursor: pointer;
                 background: $white;
-                &:hover {
-                    background: #006FCF;
-                    color: $white;
-                    border: 1px solid $white;
-                }
+                // &:hover {
+                //     background: #006FCF;
+                //     color: $white;
+                //     border: 1px solid $white;
+                // }
             }
         }
     }

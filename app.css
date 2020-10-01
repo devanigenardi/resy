@@ -724,13 +724,9 @@ _:-ms-fullscreen, :root .card-box {
   outline: 0;
   border: 1px solid #ffffff;
   transition: all .5s ease 0s;
+  opacity: 0.5;
   cursor: pointer;
   background: #ffffff;
-}
-.form-container .form-section .form button:hover {
-  background: #006FCF;
-  color: #ffffff;
-  border: 1px solid #ffffff;
 }
 @media screen and (max-width: 767px) {
   .global-access, .global-access-cards {
