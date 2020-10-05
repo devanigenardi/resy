@@ -14,7 +14,21 @@
 <body>
     
     <div class="wrapper">
-        <a id="button"><img src="images/svg/arrow_white_amex.svg" alt="" /></a>
+        <div id="sticky-nav">
+            <div class="sticky-nav-content">
+                <div class="desktop-container">
+                     <img src="images/svg/logo_amex_white.svg" alt="American Express">
+                     <div class="divider"><img src="images/svg/X.svg" alt=""></div>
+                </div>
+                <div class="mobile-container">
+                    <p><strong>Don't miss out!</strong> Enter your restaurant details to finish the set-up process on the new Resy Global Access platform.</p>
+                    <div class="last-two-items">
+                        <a id="go-to-form" class="button" href="#form"><span>GO TO FORM</span> <span><img src="images/svg/arrow_amex_top.svg" alt="" /></span></a>
+                        <a class="close" href="#!"><img src="images/svg/X.svg" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- logo naviagtion section -->
         <div class="slab logo-border">
             <section>
@@ -91,15 +105,15 @@
   
                                     <div>
                                       <label>Restaurant Name </label>
-                                      <input class="input1" type="text" name="form_field_1" required/>
+                                      <input class="input1" type="text" name="form_field_1"/>
                                     </div>
                                   
                                     <div>
                                       <label>Primary Contact Name</label>
-                                      <input class="input2" type="text" name="form_field_2" required/>
+                                      <input class="input2" type="text" name="form_field_2"/>
 
                                       <label>Primary Email Address</label>
-                                      <input class="input3" type="text" name="form_field_3" required/>
+                                      <input class="input3" type="text" name="form_field_3"/>
                                     </div>
                                     
 
@@ -117,10 +131,14 @@
                                         <input type="text" name="form_field_5" />
                                       </div>
                                       
-                                    
-                                      <button type="submit" id="submit-form" disabled>SUBMIT</button>
+                                      <p class="error-message display-none">Please provide the name of your restaurant and your contact info.</p>
+                                      
+                                      <div class="button-container">
+                                        <div class="button-blocker"></div>
+                                        <button type="submit" id="submit-form" disabled>SUBMIT</button>
+                                      </div>
 
-                                      <p class="final-message"></p>
+                                      <p class="final-message display-none">Thank you. If you own another restaurant, please complete and submit the form again.</p>
                                   
                                   </form>
                             </div>
@@ -152,7 +170,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="global-access-cards">
+                    <div class="global-access-cards sticky-nav-init">
                         <div class="pull-left">
                             <h3><img src="images/svg/grid-icon-1.svg" alt="icon" /> <span>Even More Engaged Diners</h3>
                                 <p>In addition to our highly valued American Express Card Members, you’ll reach a brand new network of culinary connoisseurs. Resy diners booked over 21 million reservations on the platform in 2019 alone. </span></p>
@@ -217,7 +235,7 @@
                         <div>
                             <h2>Hospitality reimagined.</h2>
                             <p>Want to learn more about Resy’s advanced restaurant technology?</p>
-                            <a href="https://www.resyos.com/" target="_blank">Learn why restaurant partners love&nbsp;Resy <span><img src="images/svg/arrow_blue_amex.svg" alt="" /></span></a>
+                            <a href="https://www.resyos.com/" target="_blank">Learn why restaurant partners love Resy <span><img src="images/svg/arrow_blue_amex.svg" alt="" /></span></a>
                         </div>
                     </div>
                 </div>
@@ -311,21 +329,17 @@
             .setTween(parallaxTl6)
             .addTo(controller);
 
+            var parallaxTl7 = new TimelineMax();
+            parallaxTl7.from('#sticky-nav', 1, {autoAlpha: 0, ease:Power0.easeNone}, 0.4);
 
-            var btn = $('#button');
-
-            $(window).scroll(function() {
-                if ($(window).scrollTop() > 300) {
-                    btn.addClass('show');
-                } else {
-                    btn.removeClass('show');
-                }
-            });
-
-            btn.on('click', function(e) {
-                e.preventDefault();
-                $('html, body').animate({scrollTop:0}, '300');
-                });
+            var slideParallaxScene = new ScrollMagic.Scene({
+                triggerElement: '.sticky-nav-init',
+                triggerHook: 0.8,
+                duration: '20%'
+            })
+            
+            .setTween(parallaxTl7)
+            .addTo(controller);
                 
         });
 
@@ -341,6 +355,11 @@
             scrollToElement($(this).attr('href'));
         });
 
+        $(document).on('click', 'a#go-to-form', function () {
+            scrollToElement($(this).attr('href'));
+        });
+
+
         //https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175
         //https://mashe.hawksey.info/2014/07/google-sheets-as-a-database-insert-with-apps-script-using-postget-methods-with-ajax-example/
         
@@ -350,7 +369,7 @@
             url = 'https://script.google.com/macros/s/AKfycbzsyGJEB8QxKsp29PQvh4MgwoqJVETv23qbzDm2WgFl2pX0a4Y/exec'
         
         $('#submit-form').on('click', function(e) {
-        //   e.preventDefault();
+          e.preventDefault();
           var jqxhr = $.ajax({
             url: url,
             method: "GET",
@@ -360,9 +379,18 @@
                 console.log(e) //{result: "success", row: 9}
             }
           );
+
+          $(".final-message").removeClass('display-none');
+          $(".button-blocker").css('display', 'block')
           $("#test-form").trigger("reset");
-          $(".final-message").text('Thank you. If you own another restaurant, please complete and submit the form again.').css("padding", "20px 0");
-          $('#submit-form').prop('disabled', true).css("opacity", "0.5");
+        });
+
+
+        $(function(){
+            $(".button-blocker").click(function(){
+                $(".error-message").removeClass('display-none');
+                $(".final-message").addClass('display-none');
+            });
         });
 
         $(function(){
@@ -371,14 +399,22 @@
                 var input2 = $('.input2').val() != "";
                 var input3 = $('.input3').val() != "";
                 if(input1 && input2 && input3) {
-                    // the button is enabled here
-                    $('#submit-form').css("opacity", "1");
+                    console.log('the button is enabled here');
                     $('#submit-form').prop('disabled', false);
-                } 
+                    $(".button-blocker").css('display', 'none');
+                    $(".error-message").addClass('display-none');
+                } else {
+                    $(".error-message").addClass('display-none');
+                    $(".final-message").addClass('display-none');
+                }
             });
         });
 
-
+        $(function(){
+            $('a.close').on('click', function() {
+                $('#sticky-nav').css('display', 'none')
+            });
+        });
         
 
     </script>

@@ -53,19 +53,18 @@
                     width: 8px;
                     height: 12px;
                     position: relative;
-                    display: inline-block;
                     img {
                         width: 8px;
                         height: 12px;
                         display: inline-block;
                         position: absolute;
-                        top: 0px;
-                        left: 0px;
+                        top: 5px;
+                        left: 5px;
                         transition: all .5s ease 0s;
                     }
                 }
                 &:hover > span img {
-                    left: 5px
+                    left: 10px
                 }
             }
             

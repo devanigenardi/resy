@@ -1,0 +1,124 @@
+#sticky-nav {
+    position: fixed;
+    left: 0px;
+    width: 100vw;
+    z-index: 2000;
+    overflow: hidden;
+    background-color: #006FCF;
+    border-bottom: 15px solid $white;
+    color: $white;
+    @media screen and (max-width: 767px) {
+        bottom: 0px;
+        left: 0px;
+        position: fixed;
+        border-bottom: 0;
+    }
+    .sticky-nav-content {
+        display: flex;
+        width: 100%;
+        max-width: 1180px;
+        padding: 30px 20px;
+        margin: 0 auto;
+        align-items: center;
+        .desktop-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 340px;
+            @media screen and (max-width: 1023px) {
+                display: none;
+            }
+            img {
+                width: 300px;
+                height: auto;
+                padding-right: 20px;
+            }
+            .divider {
+                width: 1px;
+                height: 50px;
+                background-color: $white;
+            }
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 864px;
+            display: flex;
+            align-items: center;
+            padding-left: 45px;
+            justify-content: space-around;
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                padding-left: 0px;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+            p {
+                width: 100%;
+                max-width: 450px;
+                strong {
+                    font-family: 'BentonSans';
+                }
+                @media screen and (max-width: 767px) {
+                   max-width: 100%;
+                   font-size: 14px;
+                   line-height: 20px;
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+            .last-two-items {
+                display: flex;
+                align-items: center;
+
+                @media screen and (max-width: 767px) {
+                    justify-content: space-between;
+                    max-width: 480px;
+                    width: 100%;
+                    padding: 20px 0 0 0px;
+                }
+                .button{
+                    padding: 10px 20px;
+                    background: $white;
+                    color: #006FCF;
+                    font-size: 16px;
+                    line-height: 20px;
+                    height: 40px;
+                    border-radius: 5px;
+                    display: flex;
+                    width: 189px;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-family: 'BentonSansMedium';
+                    @media screen and (max-width: 767px) {
+                        justify-content: space-between;
+                        max-width: 270px;
+                        padding: 25px 60px;
+                        width: 100%;
+                    }
+                    span {
+                        &:last-child {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+        
+                .close {
+                    color: $white;
+                    width: 14px;
+                    height: 14px;
+                    margin-left: 20px;
+                    @media screen and (max-width: 767px) {
+                        width: 40px;
+                        height: 40px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        
+    }
+}

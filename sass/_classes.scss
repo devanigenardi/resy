@@ -57,3 +57,13 @@
 .display-block {
     display: block;
 }
+
+.display-none {
+    display: none;
+}
+
+.error-message {
+    color: $white;
+    padding: 5px 10px;
+    background: #333333;
+}

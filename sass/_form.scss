@@ -10,7 +10,7 @@
         margin-bottom: 15px;
         img {
             height: 38px;
-            width: auto;
+            width: 217px;
         }
         .bar {
             height: 38px;
@@ -153,28 +153,40 @@
                     padding: 10px;
                     border-radius: 2px;
                 }
-
             }
 
-            button {
-                margin-top: 30px;
-                text-align: center;
-                width: 100%;
-                padding: 15px;
-                color: #006FCF;
-                font-family: 'BentonSansMedium';
-                border-radius: 2px;
-                outline: 0;
-                border: 1px solid $white;
-                transition: all .5s ease 0s;
-                opacity: 0.5;
-                cursor: pointer;
-                background: $white;
-                // &:hover {
-                //     background: #006FCF;
-                //     color: $white;
-                //     border: 1px solid $white;
-                // }
+            .button-container {
+                border: 0;
+                position: relative;
+                padding-left: 0px;
+                .button-blocker {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 1;
+                }
+                button {
+                    margin-top: 30px;
+                    text-align: center;
+                    width: 100%;
+                    padding: 15px;
+                    color: #006FCF;
+                    font-family: 'BentonSansMedium';
+                    border-radius: 2px;
+                    outline: 0;
+                    border: 1px solid $white;
+                    transition: all .3s ease 0s;
+                    cursor: pointer;
+                    background: $white;
+                    &:hover {
+                        background: #006FCF;
+                        color: $white;
+                        border: 1px solid $white;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }

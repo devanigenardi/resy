@@ -119,6 +119,7 @@ p, a {
 }
 body {
   font-family: 'Guardian Egyptian Web';
+  position: relative;
 }
 body .wrapper {
   width: 100%;
@@ -245,6 +246,146 @@ body .test {
 }
 .display-block {
   display: block;
+}
+.display-none {
+  display: none;
+}
+.error-message {
+  color: #ffffff;
+  padding: 5px 10px;
+  background: #333333;
+}
+#sticky-nav {
+  position: fixed;
+  left: 0px;
+  width: 100vw;
+  z-index: 2000;
+  overflow: hidden;
+  background-color: #006FCF;
+  border-bottom: 15px solid #ffffff;
+  color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  #sticky-nav {
+      bottom: 0px;
+      left: 0px;
+      position: fixed;
+      border-bottom: 0;
+ }
+}
+#sticky-nav .sticky-nav-content {
+  display: flex;
+  width: 100%;
+  max-width: 1180px;
+  padding: 30px 20px;
+  margin: 0 auto;
+  align-items: center;
+}
+#sticky-nav .sticky-nav-content .desktop-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 340px;
+}
+@media screen and (max-width: 1023px) {
+  #sticky-nav .sticky-nav-content .desktop-container {
+      display: none;
+ }
+}
+#sticky-nav .sticky-nav-content .desktop-container img {
+  width: 300px;
+  height: auto;
+  padding-right: 20px;
+}
+#sticky-nav .sticky-nav-content .desktop-container .divider {
+  width: 1px;
+  height: 50px;
+  background-color: #ffffff;
+}
+#sticky-nav .sticky-nav-content .mobile-container {
+  width: 100%;
+  max-width: 864px;
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  justify-content: space-around;
+}
+@media screen and (max-width: 767px) {
+  #sticky-nav .sticky-nav-content .mobile-container {
+      flex-direction: column;
+      padding-left: 0px;
+      max-width: 480px;
+      margin: 0 auto;
+ }
+}
+#sticky-nav .sticky-nav-content .mobile-container p {
+  width: 100%;
+  max-width: 450px;
+}
+#sticky-nav .sticky-nav-content .mobile-container p strong {
+  font-family: 'BentonSans';
+}
+@media screen and (max-width: 767px) {
+  #sticky-nav .sticky-nav-content .mobile-container p {
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 20px;
+ }
+}
+#sticky-nav .sticky-nav-content .mobile-container a {
+  text-decoration: none;
+}
+#sticky-nav .sticky-nav-content .mobile-container .last-two-items {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  #sticky-nav .sticky-nav-content .mobile-container .last-two-items {
+      justify-content: space-between;
+      max-width: 480px;
+      width: 100%;
+      padding: 20px 0 0 0px;
+ }
+}
+#sticky-nav .sticky-nav-content .mobile-container .last-two-items .button {
+  padding: 10px 20px;
+  background: #ffffff;
+  color: #006FCF;
+  font-size: 16px;
+  line-height: 20px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  width: 189px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'BentonSansMedium';
+}
+@media screen and (max-width: 767px) {
+  #sticky-nav .sticky-nav-content .mobile-container .last-two-items .button {
+      justify-content: space-between;
+      max-width: 270px;
+      padding: 25px 60px;
+      width: 100%;
+ }
+}
+#sticky-nav .sticky-nav-content .mobile-container .last-two-items .button span:last-child {
+  width: 20px;
+  height: 20px;
+}
+#sticky-nav .sticky-nav-content .mobile-container .last-two-items .close {
+  color: #ffffff;
+  width: 14px;
+  height: 14px;
+  margin-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  #sticky-nav .sticky-nav-content .mobile-container .last-two-items .close {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+ }
 }
 .logo-border {
   border-bottom: 2px solid #00175A;
@@ -557,7 +698,7 @@ _:-ms-fullscreen, :root .card-box {
 }
 .form-container .logo img {
   height: 38px;
-  width: auto;
+  width: 217px;
 }
 .form-container .logo .bar {
   height: 38px;
@@ -713,7 +854,20 @@ _:-ms-fullscreen, :root .card-box {
   padding: 10px;
   border-radius: 2px;
 }
-.form-container .form-section .form button {
+.form-container .form-section .form .button-container {
+  border: 0;
+  position: relative;
+  padding-left: 0px;
+}
+.form-container .form-section .form .button-container .button-blocker {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.form-container .form-section .form .button-container button {
   margin-top: 30px;
   text-align: center;
   width: 100%;
@@ -723,10 +877,15 @@ _:-ms-fullscreen, :root .card-box {
   border-radius: 2px;
   outline: 0;
   border: 1px solid #ffffff;
-  transition: all .5s ease 0s;
-  opacity: 0.5;
+  transition: all .3s ease 0s;
   cursor: pointer;
   background: #ffffff;
+}
+.form-container .form-section .form .button-container button:hover {
+  background: #006FCF;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .global-access, .global-access-cards {
@@ -1170,19 +1329,18 @@ _:-ms-fullscreen, :root .card-box {
   width: 8px;
   height: 12px;
   position: relative;
-  display: inline-block;
 }
 .resy-app .resy-app-container div a span img {
   width: 8px;
   height: 12px;
   display: inline-block;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 5px;
+  left: 5px;
   transition: all .5s ease 0s;
 }
 .resy-app .resy-app-container div a:hover > span img {
-  left: 5px;
+  left: 10px;
 }
 .resy-app:before {
   content: '';
@@ -1219,43 +1377,6 @@ _:-ms-fullscreen, :root .card-box {
 @media screen and (max-width: 767px) {
   .resy-footer .footer img {
       width: 210px;
- }
-}
-#button {
-  display: inline-block;
-  background-color: #006FCF;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  transition: background-color .3s, opacity .5s, visibility .5s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
-  cursor: pointer;
-  border: 2px solid #ffffff;
-}
-#button img {
-  transform: rotate(-90deg);
-  margin: 7px auto 0 auto;
-}
-#button:hover {
-  cursor: pointer;
-  background-color: #333333;
-}
-#button:active {
-  background-color: #333333;
-}
-#button.show {
-  opacity: 1;
-  visibility: visible;
-}
-@media (max-width: 767px) {
-  #button {
-      margin: 0px;
  }
 }
 /*# sourceMappingURL=app.css.map */
