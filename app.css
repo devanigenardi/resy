@@ -761,24 +761,12 @@ _:-ms-fullscreen, :root .card-box {
       border: none;
  }
 }
-.form-container .form-section .form-content div .white-arrow {
-  position: absolute;
-  height: 30px;
-  width: 11px;
-  left: -1px;
-  bottom: 76%;
-}
-@media screen and (max-width: 767px) {
-  .form-container .form-section .form-content div .white-arrow {
-      display: none;
- }
-}
 .form-container .form-section .form-content div p {
   font-size: 16px;
   line-height: 24px;
 }
 .form-container .form-section .form-content div p:first-child {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 @media screen and (max-width: 767px) {
   .form-container .form-section .form-content div p:first-child {
@@ -789,6 +777,23 @@ _:-ms-fullscreen, :root .card-box {
 }
 .form-container .form-section .form-content div p span {
   font-family: 'BentonSansMedium';
+}
+.form-container .form-section .form-content div .white-arrow-container {
+  position: relative;
+}
+.form-container .form-section .form-content div .white-arrow-container .white-arrow {
+  position: absolute;
+  height: 30px;
+  width: 11px;
+  left: -21px;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+@media screen and (max-width: 767px) {
+  .form-container .form-section .form-content div .white-arrow-container .white-arrow {
+      display: none;
+ }
 }
 .form-container .form-section .form-hidden {
   padding: 35px 30px 60px 40px;

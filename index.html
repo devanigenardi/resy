@@ -93,9 +93,10 @@
                                 <h2>Transfer your Global Dining Collection profile.</h2>
                                 <p class="arrow-trigger">As a member of the Global Dining Collection, your Resy Global Access profile is almost ready.</p>
                                 <div>
-                                    <img class="white-arrow" src="images/svg/arrow_white_amex.svg" alt="" />
                                     <p>Enter your restaurant details to finish the set-up process. Once submitted, we’ll begin the onboarding stage so you can unlock all the exciting benefits that this new network has to offer.</p>
-                                    <p class="hide-mobile-arrow"><span>The email address you provide will serve as your login for Resy Global Access.</span> Please submit one form per restaurant.</p>
+                                    <p class="hide-mobile-arrow white-arrow-container"><span>The email address you provide will serve as your login for Resy Global Access.</span> Please submit one form per restaurant.
+                                        <img class="white-arrow" src="images/svg/arrow_white_amex.svg" alt="" />
+                                    </p>
                                 </div>
                             </div>
                             <div id="form" class="form">
@@ -314,19 +315,6 @@
             })
             
             .setTween(parallaxTl5)
-            .addTo(controller);
-
-            var parallaxTl6 = new TimelineMax();
-            parallaxTl6
-                .to('.white-arrow', 0.7, {duration: 1.5, y:'270%',  ease:Power0.easeNone}, 0.4);
-            
-            var slideParallaxScene = new ScrollMagic.Scene({
-                triggerElement: '.arrow-trigger',
-                triggerHook: 1,
-                duration: '100%'
-            })
-            
-            .setTween(parallaxTl6)
             .addTo(controller);
 
             var parallaxTl7 = new TimelineMax();
